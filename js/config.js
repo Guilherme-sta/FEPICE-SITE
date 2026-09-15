@@ -62,7 +62,7 @@ const SITE_CONFIG = {
   },
 
   cronograma: {
-    showSchedule: false,
+    showSchedule: true,
     categorias: ["Palestras", "Minicursos", "Apresentação de Trabalhos"],
     itens: [
       // { categoria: "Palestras", dia: "2026-10-06", horario: "14:00",
@@ -89,6 +89,11 @@ const SITE_CONFIG = {
       logo: "assets/logo/logo-lims.png" 
     },
     demais: [
+      {nome: "InvestePiaui", logo: "assets/logo/logo-investepiaui.png"},
+      {nome: "SEBRAE", logo: "assets/logo/logo-sebrae.jpeg"},
+      {nome: "INOVAIFPI", logo: "assets/logo/logo-inovaifpi.jpeg"},
+      {nome: "NEPI", logo: "assets/logo/logo-nepi.jpeg"},
+      {nome: "NIT", logo: "assets/logo/logo-nit.jpeg"},
       // { nome: "", logo: "" }  ← preencher e adicionar a imagem em assets/logo/
     ]
   }
