@@ -125,10 +125,31 @@ h1, h2, h3 {
   text-decoration: none;
 }
 
-.header__logo {
-  height: 52px;
+.header__logos {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.logo-img--header-principal {
+  height: 55px;
   width: auto;
   border-radius: 4px;
+}
+
+.logo-img--header {
+  height: 55px;
+  width: auto;
+  border-radius: 4px;
+}
+
+.header__logos .logo-placeholder {
+  height: 48px;
+}
+
+.header__logos .logo-placeholder.logo-img--header-principal,
+.header__logos > :first-child.logo-placeholder {
+  height: 48px;
 }
 
 .header__toggle {
@@ -202,9 +223,31 @@ h1, h2, h3 {
   max-width: 720px;
 }
 
-.hero__logo {
-  width: min(420px, 80%);
+.hero__logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.75rem;
   margin: 0 auto 1.75rem;
+}
+
+.logo-img--hero-principal {
+  height: 140px;
+  width: auto;
+}
+
+.logo-img--hero {
+  height: 140px;
+  width: auto;
+}
+
+.hero__logos .logo-placeholder {
+  height: 110px;
+}
+
+.hero__logos .logo-placeholder.logo-img--hero-principal {
+  height: 110px;
 }
 
 .hero__eyebrow {
@@ -215,8 +258,16 @@ h1, h2, h3 {
 }
 
 .hero__title {
-  margin: 0 0 1.25rem;
+  margin: 0 0 0.35rem;
   font-size: clamp(1.9rem, 4vw, 2.75rem);
+}
+
+.hero__subtitulo {
+  margin: 0 0 1.25rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--cor-texto-suave);
+  letter-spacing: 0.02em;
 }
 
 .hero__faixa {
@@ -287,6 +338,52 @@ h1, h2, h3 {
   border-color: var(--cor-borda);
   cursor: not-allowed;
   pointer-events: none;
+}
+
+/* ===================== LOGO PLACEHOLDER (eventos/apoiadores sem imagem) ===================== */
+
+.logo-placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.9rem;
+  border: 1.5px dashed var(--cor-borda);
+  border-radius: var(--raio);
+  background: var(--cor-status-bg);
+  white-space: nowrap;
+}
+
+.logo-placeholder span {
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--cor-azul-escuro);
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cor-bg-alt); /* mesmo cinza-claro usado no site */
+  border-radius: var(--raio);
+  padding: 0.5rem 1rem;
+}
+
+.logo-box .logo-img {
+  max-width: none;   /* anula a regra global "img { max-width: 100% }" */
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+.logo-img--footer,
+.footer__brand .logo-placeholder {
+  height: 40px;
+}
+
+
+.footer__brand .logo-placeholder span {
+  color: var(--cor-texto-claro);
 }
 
 /* ===================== SEÇÕES ===================== */
@@ -377,13 +474,52 @@ h1, h2, h3 {
   color: var(--cor-azul-escuro);
 }
 
-/* ===================== CARDS (Materiais) ===================== */
+/* ===================== SEÇÃO LARGA (Sobre os Eventos, Inscrições, Materiais) ===================== */
+
+.section__content--largo {
+  max-width: none;
+}
+
+/* ===================== CARDS (Materiais / Eventos / Inscrições) ===================== */
 
 .cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
   max-width: none;
+}
+
+.cards--eventos,
+.cards--inscricoes {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card--evento {
+  border-top: 3px solid var(--cor-azul);
+  display: flex;
+  flex-direction: column;
+}
+
+.card__eyebrow {
+  margin: 0 0 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cor-verde);
+}
+
+.card__acao {
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+#evento-sobre-teresinaInfo,
+#evento-inscricao-teresinaInfo {
+  border-top-color: var(--cor-verde);
+}
+
+#evento-sobre-ideiaLab,
+#evento-inscricao-ideiaLab {
+  border-top-color: var(--cor-dourado);
 }
 
 .card {
@@ -430,6 +566,141 @@ h1, h2, h3 {
   box-shadow: 0 4px 14px rgba(9, 28, 140, 0.08);
 }
 
+/* ===================== CRONOGRAMA DA SEMANA ===================== */
+
+.cronograma__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.cronograma__tab {
+  padding: 0.65rem 1.2rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--cor-borda);
+  background: var(--cor-bg);
+  color: var(--cor-texto-suave);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.cronograma__tab:hover {
+  border-color: var(--cor-azul);
+  color: var(--cor-azul);
+}
+
+.cronograma__tab.is-active {
+  background: var(--cor-azul);
+  border-color: var(--cor-azul);
+  color: #fff;
+}
+
+.cronograma__lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cronograma__item {
+  display: grid;
+  grid-template-columns: 170px 1fr auto;
+  gap: 0.25rem 1rem;
+  align-items: baseline;
+  border: 1px solid var(--cor-borda);
+  border-left: 3px solid var(--cor-azul);
+  border-radius: var(--raio);
+  padding: 1rem 1.25rem;
+  background: var(--cor-bg);
+}
+
+.cronograma__quando {
+  font-weight: 600;
+  color: var(--cor-azul-escuro);
+  font-size: 0.9rem;
+}
+
+.cronograma__titulo {
+  font-weight: 600;
+}
+
+.cronograma__responsavel,
+.cronograma__local {
+  color: var(--cor-texto-suave);
+  font-size: 0.9rem;
+  grid-column: 2 / 3;
+}
+
+/* ===================== APOIADORES E REALIZAÇÃO ===================== */
+
+.apoiador-destaque {
+  text-align: center;
+  padding: 2rem 1.5rem;   /* Reduzido um pouco o padding interno para dar mais espaço à logo */
+  margin-bottom: 2rem;
+  border: 1.5px solid var(--cor-borda);
+  border-radius: var(--raio);
+  background: var(--cor-bg-alt);
+}
+
+.apoiador-destaque__rotulo {
+  margin: 0 0 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--cor-texto-suave);
+}
+
+/* Regra para a imagem dentro da caixa de destaque */
+.apoiador-destaque img,
+.apoiador-destaque .logo-img--lims {
+  height: 200px;           /* Aumentado consideravelmente para destacar na caixa */
+  width: auto;            /* Preserva a proporção original */
+  max-width: 90%;         /* Garante que ocupe a largura sem colar nas bordas */
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
+
+.apoiador-destaque .logo-placeholder {
+  height: 160px;
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.apoiador-destaque .logo-placeholder span {
+  font-size: 1.3rem;
+}
+
+.apoiadores-demais__rotulo {
+  text-align: center;
+  margin: 0 0 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--cor-texto-suave);
+}
+
+.apoiadores-demais__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.logo-img--apoiador,
+.apoiadores-demais__grid .logo-placeholder {
+  height: 20px;
+}
+
 /* ===================== FOOTER ===================== */
 
 .footer {
@@ -445,20 +716,22 @@ h1, h2, h3 {
 
 .footer__brand {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.85rem;
-  margin-bottom: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
-.footer__logo {
-  height: 44px;
+.footer__brand img.logo-img--footer {
   border-radius: 4px;
 }
 
-.footer__brand p {
+.footer__inner p {
   color: rgba(244, 244, 244, 0.85);
-  max-width: 420px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer__data {
@@ -482,7 +755,7 @@ h1, h2, h3 {
 
 /* ===================== RESPONSIVO ===================== */
 
-@media (max-width: 780px) {
+@media (max-width: 1024px) {
   .header__toggle {
     display: flex;
   }
@@ -508,16 +781,22 @@ h1, h2, h3 {
   }
 
   .nav__link {
-    display: block;
-    padding: 0.85rem 0;
-    border-top: 1px solid var(--cor-borda);
+    position: relative;
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding-bottom: 4px;
+    white-space: nowrap;   /* adicionar esta linha */
   }
 
   .nav__link::after {
     display: none;
   }
 
-  .cards {
+  .cards,
+  .cards--eventos,
+  .cards--inscricoes {
     grid-template-columns: 1fr;
   }
 
@@ -525,8 +804,31 @@ h1, h2, h3 {
     padding: 2.75rem 0 3rem;
   }
 
-  .hero__logo {
-    width: min(320px, 90%);
+  .hero__logos {
+    gap: 1.1rem;
+  }
+
+  .logo-img--hero-principal,
+  .hero__logos .logo-placeholder.logo-img--hero-principal {
+    height: 40px;
+  }
+
+  .logo-img--hero,
+  .hero__logos .logo-placeholder {
+    height: 40px;
+  }
+
+  .header__logos {
+    gap: 0.7rem;
+  }
+
+  .cronograma__item {
+    grid-template-columns: 1fr;
+  }
+
+  .cronograma__responsavel,
+  .cronograma__local {
+    grid-column: 1 / 2;
   }
 
   :root {

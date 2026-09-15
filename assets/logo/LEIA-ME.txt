@@ -1,0 +1,20 @@
+Logos do portal — Semana de Ciência e Tecnologia 2026
+------------------------------------------------------
+
+Já presente:
+- logo-fepice-oficial.jpg  (em uso)
+
+Ainda faltam (quando você tiver os arquivos, salve aqui com estes nomes
+e depois atualize o caminho correspondente em js/config.js):
+
+- logo-teresina-info.png   → SITE_CONFIG.eventos.teresinaInfo.logo
+- logo-ideialab.png        → SITE_CONFIG.eventos.ideiaLab.logo
+- logo-lims.png            → SITE_CONFIG.apoiadores.lims.logo
+
+Para outros apoiadores/patrocinadores, salve a logo aqui (ex: logo-nome-do-apoiador.png)
+e adicione um item em SITE_CONFIG.apoiadores.demais:
+  { nome: "Nome do apoiador", logo: "assets/logo/logo-nome-do-apoiador.png" }
+
+Enquanto o campo "logo" não for preenchido, o site mostra automaticamente
+um placeholder neutro com o nome do evento/apoiador, sem inventar nenhuma
+marca — nada mais precisa ser alterado no HTML ou CSS.
