@@ -33,7 +33,7 @@ const SITE_CONFIG = {
       sobreDisponivel: true,
       sobreTexto: "A II Feira Piauiense de Ciências e Engenharia – FEPICE será realizada de 06 a 09 de outubro de 2026, no Campus Teresina Central do Instituto Federal do Piauí (IFPI), em Teresina/PI. É um evento gratuito e de abrangência estadual, destinado a estudantes do 8º e 9º anos do Ensino Fundamental, do Ensino Médio e do Ensino Técnico.",
       inscricao: {
-        disponivel: true,
+        disponivel: false,
         url: "https://forms.gle/S7zV8ow6jTha5kDH8"
       }
     },
