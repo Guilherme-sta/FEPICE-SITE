@@ -91,19 +91,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ---------- Inscrições (3 cards) ---------- */
   const inscricoesCards = document.getElementById("eventos-inscricoes-cards");
+
   if (inscricoesCards) {
+
     inscricoesCards.innerHTML = ORDEM_EVENTOS.map((chave) => {
+
       const ev = SITE_CONFIG.eventos[chave];
-      const acao = ev.inscricao.disponivel && ev.inscricao.url
-        ? `<a class="btn btn--primary" href="${ev.inscricao.url}" target="_blank" rel="noopener">Inscrever-se</a>`
-        : `<span class="card__status">Inscrições em breve</span>`;
+
+      const acao = `
+    <div class="card__botoes">
+
+      ${
+        ev.inscricao.disponivel && ev.inscricao.url
+          ? `<a class="btn btn--primary" href="${ev.inscricao.url}" target="_blank" rel="noopener">Inscrever-se</a>`
+          : `<span class="card__status">Inscrições em breve</span>`
+      }
+
+      ${
+        ev.edital && ev.edital.disponivel && ev.edital.url
+          ? `<a class="btn btn--secondary" href="${ev.edital.url}" target="_blank" rel="noopener">Edital</a>`
+          : ""
+      }
+
+    </div>
+  `;
+
       return `
         <article class="card card--evento" id="evento-inscricao-${chave}">
+
           <h3 class="card__title">${ev.nome}</h3>
+
           ${ev.nomeCompleto ? `<p class="card__eyebrow">${ev.nomeCompleto}</p>` : ""}
+
           <div class="card__acao">${acao}</div>
+
         </article>
       `;
+
     }).join("");
   }
 
@@ -167,11 +191,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const fepiceInscricao = SITE_CONFIG.eventos.fepice.inscricao;
   if (fepiceInscricao.disponivel && fepiceInscricao.url) {
     setCardAtivo("card-inscricao", fepiceInscricao.url);
-  }
-
-  // Edital
-  if (SITE_CONFIG.edital.disponivel && SITE_CONFIG.edital.arquivoUrl) {
-    setCardAtivo("card-edital", SITE_CONFIG.edital.arquivoUrl);
   }
 
   // Projetos aprovados

@@ -57,7 +57,11 @@ const SITE_CONFIG = {
       inscricao: {
         disponivel: true,
         url: "https://forms.gle/dLEgLeR58XUi2jW7A"
-      }
+      },
+      edital: {
+        disponivel: true,
+        url: "assets/docs/edital-Ideia-Lab.pdf"
+      },
     }
   },
 
@@ -68,11 +72,6 @@ const SITE_CONFIG = {
       // { categoria: "Palestras", dia: "2026-10-06", horario: "14:00",
       //   titulo: "", responsavel: "", local: "" }
     ]
-  },
-
-  edital: {
-    disponivel: false,
-    arquivoUrl: "" // ex: "assets/docs/edital-fepice-2026.pdf"
   },
 
   projetosAprovados: {
@@ -94,8 +93,8 @@ const SITE_CONFIG = {
       {nome: "INOVAIFPI", logo: "assets/logo/logo-inovaifpi.jpeg"},
       {nome: "NEPI", logo: "assets/logo/logo-nepi.jpeg"},
       {nome: "NIT", logo: "assets/logo/logo-nit.jpeg"},
+      {nome: "FAPEPI", logo: "assets/logo/logo-fapepi.jpeg"},
       // { nome: "", logo: "" }  ← preencher e adicionar a imagem em assets/logo/
     ]
   }
-
 };

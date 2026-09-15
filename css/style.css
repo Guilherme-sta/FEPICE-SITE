@@ -243,11 +243,16 @@ h1, h2, h3 {
 /* CORRIGIDO */
 .hero__logos {
   display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
   justify-content: center;
-  gap: 1.75rem;              /* fixo, não precisa de vw: o container já tem largura máxima de 720px */
-  margin: 0.75rem auto 1.5rem;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.hero__logos img {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
 }
 
 .logo-img--hero-principal,
@@ -708,16 +713,21 @@ h1, h2, h3 {
 }
 
 .apoiadores-demais__grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem 3rem;
   align-items: center;
-  gap: 1.75rem;
+  justify-items: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .logo-img--apoiador,
 .apoiadores-demais__grid .logo-placeholder {
-  height: 48px;
+  height: 60px;
+  width: 100%;
+  max-width: 200px;
+  object-fit: contain;
 }
 
 /* ===================== FOOTER ===================== */
@@ -871,6 +881,19 @@ h1, h2, h3 {
     gap: 0.7rem;
   }
 
+  .card__botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .card__botoes .btn {
+    min-width: 130px;
+    text-align: center;
+  }
+
   .cronograma__item {
     grid-template-columns: 1fr;
   }
@@ -887,6 +910,40 @@ h1, h2, h3 {
   .logo-img--apoiador,
   .apoiadores-demais__grid .logo-placeholder {
     height: 38px;
+  }
+}
+
+@media (max-width: 700px) {
+  .apoiadores-demais__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem 1rem;
+  }
+
+   .hero__logos img {
+    height: 58px;
+  }
+
+  .logo-img--apoiador,
+  .apoiadores-demais__grid .logo-placeholder {
+    height: 45px;
+    max-width: 130px;
+  }
+}
+
+@media (max-width: 450px) {
+  .apoiadores-demais__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 0.75rem;
+  }
+
+  .logo-img--apoiador,
+  .apoiadores-demais__grid .logo-placeholder {
+    height: 42px;
+    max-width: 120px;
+  }
+
+  .hero__logos img {
+    height: 50px;
   }
 }
 
