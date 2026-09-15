@@ -114,9 +114,11 @@ h1, h2, h3 {
 .header__bar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
+  justify-content: center; /* Centraliza tudo no meio exato da tela */
+  width: 100%;
+  max-width: 1200px; /* Ou a largura máxima do seu layout */
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .header__brand {
@@ -178,9 +180,19 @@ h1, h2, h3 {
   background: var(--cor-azul-escuro);
 }
 
+.nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .nav__list {
   display: flex;
-  gap: 1.75rem;
+  justify-content: center; /* Centraliza os itens */
+  align-items: center;
+  width: 100%;
+  max-width: 800px; /* Controla o quanto a lista vai se espalhar */
+  gap: 2.5rem; /* Aumenta o espaço entre os itens para preencher a barra */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -762,6 +774,13 @@ h1, h2, h3 {
 
 /* ===================== RESPONSIVO ===================== */
 
+@media (min-width: 769px) {
+  .header__brand:empty,
+  .header__toggle {
+    display: none;
+  }
+}
+
 @media (max-width: 480px) {
   .logo-img--header-principal,
   .logo-img--header {
@@ -790,14 +809,24 @@ h1, h2, h3 {
   }
 
   .header__bar {
-    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente tudo dentro da barra */
+    width: 100%;
+  }
+
+  .nav{
+    margin: 0 auto;
   }
 
   .nav__list {
-    flex-direction: column;
-    gap: 1.25rem;
-    padding: 1rem 0 0.5rem;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem; /* Espaçamento entre os links do menu */
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
   .nav__link {
