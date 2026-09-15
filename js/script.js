@@ -174,11 +174,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setCardAtivo("card-edital", SITE_CONFIG.edital.arquivoUrl);
   }
 
-  // Modelo de banner
-  if (SITE_CONFIG.banner.disponivel && SITE_CONFIG.banner.arquivoUrl) {
-    setCardAtivo("card-banner", SITE_CONFIG.banner.arquivoUrl);
-  }
-
   // Projetos aprovados
   const projetosArea = document.getElementById("projetos-area");
   if (projetosArea && SITE_CONFIG.projetosAprovados.disponivel) {
@@ -265,5 +260,5 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       `;
     }
-  y}
+  }
 });
