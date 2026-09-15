@@ -48,8 +48,8 @@ const SITE_CONFIG = {
       sobreDisponivel: false,
       sobreTexto: "",
       inscricao: {
-        disponivel: false,
-        url: ""
+        disponivel: true,
+        url: "https://suap.ifpi.edu.br/eventos/inscricao/1/4052/"
       }
     },
     ideiaLab: {
