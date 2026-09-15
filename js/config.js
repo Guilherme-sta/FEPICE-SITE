@@ -60,7 +60,7 @@ const SITE_CONFIG = {
       },
       edital: {
         disponivel: true,
-        url: "assets/docs/edital-Ideia-Lab.pdf"
+        url: "https://drive.google.com/file/d/1-vXz7_aqQpTMbT069W8nv_yms3bhcg5l/view?usp=sharing"
       },
     }
   },

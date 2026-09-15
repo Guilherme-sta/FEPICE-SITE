@@ -1,11 +1,9 @@
 /* =====================================================
-   FEPICE 2026 — Identidade visual (Etapa 2)
-   Paleta extraída diretamente da logo oficial:
-   azul #091C8C · verde #256C2C · dourado #FBCD05
+   FEPICE 2026 — Identidade visual
    ===================================================== */
 
 :root {
-  /* Cores da marca (extraídas da logo oficial) */
+  /* Cores da marca */
   --cor-azul: #091C8C;
   --cor-azul-escuro: #060F52;
   --cor-verde: #256C2C;
@@ -15,7 +13,7 @@
 
   /* Neutros */
   --cor-bg: #FFFFFF;
-  --cor-bg-alt: #F4F4F4;      /* mesma cor de fundo da logo oficial */
+  --cor-bg-alt: #F4F4F4;
   --cor-bg-escura: #0A1440;
   --cor-texto: #14182B;
   --cor-texto-suave: #4C5265;
@@ -27,26 +25,35 @@
   --fonte-titulo: "Fraunces", Georgia, serif;
   --fonte-base: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 
-  --faixa-marca: linear-gradient(90deg, var(--cor-azul) 0%, var(--cor-azul) 33%, var(--cor-verde) 33%, var(--cor-verde) 66%, var(--cor-dourado) 66%, var(--cor-dourado) 100%);
+  /* Elementos */
+  --faixa-marca: linear-gradient(
+    90deg,
+    var(--cor-azul) 0%,
+    var(--cor-azul) 33%,
+    var(--cor-verde) 33%,
+    var(--cor-verde) 66%,
+    var(--cor-dourado) 66%,
+    var(--cor-dourado) 100%
+  );
 
   --largura-maxima: 1120px;
   --raio: 10px;
   --espaco-secao: 5rem;
-  --altura-header: 78px; /* altura real do cabeçalho fixo, usada para compensar o scroll */
+  --altura-header: 78px;
+}
+
+
+/* =====================================================
+   RESET / BASE
+   ===================================================== */
+
+* {
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--altura-header);
-}
-
-.hero,
-.section {
-  scroll-margin-top: var(--altura-header);
-}
-
-* {
-  box-sizing: border-box;
 }
 
 body {
@@ -55,6 +62,7 @@ body {
   color: var(--cor-texto);
   background: var(--cor-bg);
   line-height: 1.65;
+  overflow-x: hidden;
 }
 
 img {
@@ -66,12 +74,24 @@ a {
   color: var(--cor-azul);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--fonte-titulo);
   font-weight: 600;
   color: var(--cor-azul-escuro);
   line-height: 1.2;
 }
+
+.hero,
+.section {
+  scroll-margin-top: var(--altura-header);
+}
+
+
+/* =====================================================
+   CONTAINER
+   ===================================================== */
 
 .container {
   width: 100%;
@@ -79,6 +99,11 @@ h1, h2, h3 {
   margin: 0 auto;
   padding: 0 1.25rem;
 }
+
+
+/* =====================================================
+   ACESSIBILIDADE
+   ===================================================== */
 
 .skip-link {
   position: absolute;
@@ -94,7 +119,16 @@ h1, h2, h3 {
   left: 0;
 }
 
-/* ===================== HEADER ===================== */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--cor-azul);
+  outline-offset: 2px;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
 
 .header {
   position: sticky;
@@ -114,9 +148,10 @@ h1, h2, h3 {
 .header__bar {
   display: flex;
   align-items: center;
-  justify-content: center; /* Centraliza tudo no meio exato da tela */
+  justify-content: center;
   width: 100%;
-  max-width: 1200px; /* Ou a largura máxima do seu layout */
+  max-width: 1200px;
+  min-height: 74px;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -133,29 +168,14 @@ h1, h2, h3 {
   gap: 1.1rem;
 }
 
-.logo-img--header-principal {
-  height: 55px;
-  width: auto;
-  border-radius: 4px;
-}
-
-.logo-img--header {
-  height: 55px;
-  width: auto;
-  border-radius: 4px;
-}
-
 .logo-img--header-principal,
 .logo-img--header {
-  height: 68px;   /* era 55px */
+  height: 68px;
+  width: auto;
+  border-radius: 4px;
 }
 
 .header__logos .logo-placeholder {
-  height: 48px;
-}
-
-.header__logos .logo-placeholder.logo-img--header-principal,
-.header__logos > :first-child.logo-placeholder {
   height: 48px;
 }
 
@@ -180,6 +200,11 @@ h1, h2, h3 {
   background: var(--cor-azul-escuro);
 }
 
+
+/* =====================================================
+   NAVEGAÇÃO
+   ===================================================== */
+
 .nav {
   display: flex;
   justify-content: center;
@@ -188,11 +213,11 @@ h1, h2, h3 {
 
 .nav__list {
   display: flex;
-  justify-content: center; /* Centraliza os itens */
+  justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 800px; /* Controla o quanto a lista vai se espalhar */
-  gap: 2.5rem; /* Aumenta o espaço entre os itens para preencher a barra */
+  max-width: 800px;
+  gap: 2.5rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -205,6 +230,7 @@ h1, h2, h3 {
   font-size: 0.95rem;
   font-weight: 500;
   padding-bottom: 4px;
+  white-space: nowrap;
 }
 
 .nav__link::after {
@@ -228,7 +254,10 @@ h1, h2, h3 {
   width: 100%;
 }
 
-/* ===================== HERO ===================== */
+
+/* =====================================================
+   HERO
+   ===================================================== */
 
 .hero {
   padding: 3.5rem 0 4rem;
@@ -237,38 +266,76 @@ h1, h2, h3 {
 }
 
 .hero__inner {
-  max-width: 720px;
+  max-width: 900px;
 }
 
-/* CORRIGIDO */
-.hero__logos {
+
+/* -----------------------------------------------------
+   LOGO IFPI
+   ----------------------------------------------------- */
+
+.hero__logo-ifpi {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
-  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.hero__logo-ifpi img {
+  width: auto;
+  height: 220px;
+  max-width: 420px;
+  object-fit: contain;
+}
+
+
+/* -----------------------------------------------------
+   LOGOS DOS EVENTOS
+   FEPICE + Teresina Info + IdeiaLab
+   ----------------------------------------------------- */
+
+.hero__logos {
+  display: grid;
+
+  /* Mantém os 3 lado a lado */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  align-items: center;
+  justify-items: center;
+
+  gap: 1.75rem;
+
+  width: 100%;
+  max-width: 820px;
+
+  margin: 0 auto;
 }
 
 .hero__logos img {
-  height: 70px;
+  height: 82px;
   width: auto;
+  max-width: 100%;
   object-fit: contain;
 }
 
 .logo-img--hero-principal,
 .logo-img--hero {
-  height: 70px;               /* altura definida — é isso que faz o height:100% da imagem funcionar */
+  height: 82px;
   width: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
 
-.hero__logos .logo-placeholder,
-.hero__logos .logo-placeholder.logo-img--hero-principal {
-  height: 70px;
+.hero__logos .logo-placeholder {
+  width: 100%;
+  max-width: 220px;
+  height: 82px;
 }
 
-.hero__logos .logo-placeholder.logo-img--hero-principal {
-  height: 110px;
-}
+
+/* -----------------------------------------------------
+   RESTANTE DO HERO
+   ----------------------------------------------------- */
 
 .hero__eyebrow {
   margin: 0 0 0.6rem;
@@ -318,7 +385,10 @@ h1, h2, h3 {
   flex-wrap: wrap;
 }
 
-/* ===================== BOTÕES ===================== */
+
+/* =====================================================
+   BOTÕES
+   ===================================================== */
 
 .btn {
   display: inline-block;
@@ -328,7 +398,10 @@ h1, h2, h3 {
   font-weight: 600;
   font-size: 0.95rem;
   border: 1.5px solid transparent;
-  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .btn--primary {
@@ -360,7 +433,10 @@ h1, h2, h3 {
   pointer-events: none;
 }
 
-/* ===================== LOGO PLACEHOLDER (eventos/apoiadores sem imagem) ===================== */
+
+/* =====================================================
+   LOGO PLACEHOLDER
+   ===================================================== */
 
 .logo-placeholder {
   display: inline-flex;
@@ -384,13 +460,13 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--cor-bg-alt); /* mesmo cinza-claro usado no site */
+  background: var(--cor-bg-alt);
   border-radius: var(--raio);
   padding: 0.5rem 1rem;
 }
 
 .logo-box .logo-img {
-  max-width: none;   /* anula a regra global "img { max-width: 100% }" */
+  max-width: none;
   height: 100%;
   width: auto;
   display: block;
@@ -398,19 +474,17 @@ h1, h2, h3 {
 
 .logo-img--footer,
 .footer__brand .logo-placeholder {
-  height: 40px;
-}
-
-.logo-img--footer,
-.footer__brand .logo-placeholder {
-  height: 56px;   /* era 40px */
+  height: 56px;
 }
 
 .footer__brand .logo-placeholder span {
   color: var(--cor-texto-claro);
 }
 
-/* ===================== SEÇÕES ===================== */
+
+/* =====================================================
+   SEÇÕES
+   ===================================================== */
 
 .section {
   padding: var(--espaco-secao) 0;
@@ -449,6 +523,10 @@ h1, h2, h3 {
   max-width: 760px;
 }
 
+.section__content--largo {
+  max-width: none;
+}
+
 .placeholder-text {
   color: var(--cor-texto-suave);
 }
@@ -477,7 +555,10 @@ h1, h2, h3 {
   color: var(--cor-texto-suave);
 }
 
-/* ===================== TABELA DE PROJETOS ===================== */
+
+/* =====================================================
+   TABELA DE PROJETOS
+   ===================================================== */
 
 .tabela-projetos {
   width: 100%;
@@ -498,30 +579,43 @@ h1, h2, h3 {
   color: var(--cor-azul-escuro);
 }
 
-/* ===================== SEÇÃO LARGA (Sobre os Eventos, Inscrições, Materiais) ===================== */
 
-.section__content--largo {
-  max-width: none;
-}
-
-/* ===================== CARDS (Materiais / Eventos / Inscrições) ===================== */
+/* =====================================================
+   CARDS
+   ===================================================== */
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.25rem;
   max-width: none;
 }
 
 .cards--eventos,
 .cards--inscricoes {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+  border: 1px solid var(--cor-borda);
+  border-top: 3px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 1.5rem;
+  background: var(--cor-bg);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .card--evento {
   border-top: 3px solid var(--cor-azul);
   display: flex;
   flex-direction: column;
+}
+
+.card__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
 }
 
 .card__eyebrow {
@@ -531,39 +625,28 @@ h1, h2, h3 {
   color: var(--cor-verde);
 }
 
+.card__text {
+  margin: 0 0 1rem;
+  color: var(--cor-texto-suave);
+  font-size: 0.95rem;
+}
+
 .card__acao {
   margin-top: auto;
   padding-top: 0.5rem;
 }
 
-#evento-sobre-teresinaInfo,
-#evento-inscricao-teresinaInfo {
-  border-top-color: var(--cor-verde);
+.card__botoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
-#evento-sobre-ideiaLab,
-#evento-inscricao-ideiaLab {
-  border-top-color: var(--cor-dourado);
-}
-
-.card {
-  border: 1px solid var(--cor-borda);
-  border-top: 3px solid var(--cor-borda);
-  border-radius: var(--raio);
-  padding: 1.5rem;
-  background: var(--cor-bg);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card__title {
-  margin: 0 0 0.5rem;
-  font-size: 1.1rem;
-}
-
-.card__text {
-  margin: 0 0 1rem;
-  color: var(--cor-texto-suave);
-  font-size: 0.95rem;
+.card__botoes .btn {
+  min-width: 130px;
+  text-align: center;
 }
 
 .card__status {
@@ -581,16 +664,40 @@ h1, h2, h3 {
   background: var(--cor-dourado);
 }
 
-#card-edital { border-top-color: var(--cor-azul); }
-#card-inscricao { border-top-color: var(--cor-verde); }
-#card-banner { border-top-color: var(--cor-dourado); }
-#card-projetos { border-top-color: var(--cor-azul); }
+#evento-sobre-teresinaInfo,
+#evento-inscricao-teresinaInfo {
+  border-top-color: var(--cor-verde);
+}
+
+#evento-sobre-ideiaLab,
+#evento-inscricao-ideiaLab {
+  border-top-color: var(--cor-dourado);
+}
+
+#card-edital {
+  border-top-color: var(--cor-azul);
+}
+
+#card-inscricao {
+  border-top-color: var(--cor-verde);
+}
+
+#card-banner {
+  border-top-color: var(--cor-dourado);
+}
+
+#card-projetos {
+  border-top-color: var(--cor-azul);
+}
 
 .card:has(.card__status--ativo) {
   box-shadow: 0 4px 14px rgba(9, 28, 140, 0.08);
 }
 
-/* ===================== CRONOGRAMA DA SEMANA ===================== */
+
+/* =====================================================
+   CRONOGRAMA
+   ===================================================== */
 
 .cronograma__tabs {
   display: flex;
@@ -608,7 +715,10 @@ h1, h2, h3 {
   font-weight: 600;
   font-size: 0.9rem;
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .cronograma__tab:hover {
@@ -633,7 +743,7 @@ h1, h2, h3 {
 
 .cronograma__item {
   display: grid;
-  grid-template-columns: 170px 1fr auto;
+  grid-template-columns: 170px minmax(0, 1fr) auto;
   gap: 0.25rem 1rem;
   align-items: baseline;
   border: 1px solid var(--cor-borda);
@@ -660,33 +770,47 @@ h1, h2, h3 {
   grid-column: 2 / 3;
 }
 
-/* ===================== APOIADORES E REALIZAÇÃO ===================== */
+
+/* =====================================================
+   APOIADORES E REALIZAÇÃO
+   ===================================================== */
+
+
+/* -----------------------------------------------------
+   LIMS — APOIADOR PRINCIPAL
+   ----------------------------------------------------- */
 
 .apoiador-destaque {
   text-align: center;
-  padding: 2rem 1.5rem;   /* Reduzido um pouco o padding interno para dar mais espaço à logo */
-  margin-bottom: 2rem;
+  padding: 2rem 1.5rem;
+  margin-bottom: 2.5rem;
+
   border: 1.5px solid var(--cor-borda);
   border-radius: var(--raio);
+
   background: var(--cor-bg-alt);
 }
 
 .apoiador-destaque__rotulo {
   margin: 0 0 1.5rem;
+
   text-transform: uppercase;
   letter-spacing: 0.08em;
+
   font-size: 0.85rem;
   font-weight: 700;
+
   color: var(--cor-texto-suave);
 }
 
-/* Regra para a imagem dentro da caixa de destaque */
 .apoiador-destaque img,
 .apoiador-destaque .logo-img--lims {
-  height: 200px;           /* Aumentado consideravelmente para destacar na caixa */
-  width: auto;            /* Preserva a proporção original */
-  max-width: 90%;         /* Garante que ocupe a largura sem colar nas bordas */
+  height: 200px;
+  width: auto;
+  max-width: 90%;
+
   margin: 0 auto;
+
   display: block;
   object-fit: contain;
 }
@@ -695,6 +819,7 @@ h1, h2, h3 {
   height: 160px;
   width: 100%;
   max-width: 380px;
+
   margin: 0 auto;
 }
 
@@ -702,35 +827,56 @@ h1, h2, h3 {
   font-size: 1.3rem;
 }
 
+
+/* -----------------------------------------------------
+   DEMAIS APOIADORES
+   3 EM CIMA + 3 EMBAIXO
+   ----------------------------------------------------- */
+
 .apoiadores-demais__rotulo {
   text-align: center;
-  margin: 0 0 1.25rem;
+
+  margin: 0 0 1.5rem;
+
   text-transform: uppercase;
   letter-spacing: 0.08em;
+
   font-size: 0.8rem;
   font-weight: 700;
+
   color: var(--cor-texto-suave);
 }
 
 .apoiadores-demais__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem 3rem;
+
+  /* 3 colunas */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 2.5rem 3rem;
+
   align-items: center;
   justify-items: center;
+
+  width: 100%;
   max-width: 900px;
+
   margin: 0 auto;
 }
 
 .logo-img--apoiador,
 .apoiadores-demais__grid .logo-placeholder {
-  height: 60px;
+  height: 75px;
   width: 100%;
-  max-width: 200px;
+  max-width: 220px;
+
   object-fit: contain;
 }
 
-/* ===================== FOOTER ===================== */
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
 
 .footer {
   background: var(--cor-bg-escura);
@@ -748,6 +894,7 @@ h1, h2, h3 {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+
   gap: 1.25rem;
   margin-bottom: 1.25rem;
 }
@@ -759,6 +906,7 @@ h1, h2, h3 {
 .footer__inner p {
   color: rgba(244, 244, 244, 0.85);
   max-width: 480px;
+
   margin-left: auto;
   margin-right: auto;
 }
@@ -782,29 +930,77 @@ h1, h2, h3 {
   color: rgba(244, 244, 244, 0.6);
 }
 
-/* ===================== RESPONSIVO ===================== */
 
-@media (min-width: 769px) {
-  .header__brand:empty,
+/* =====================================================
+   RESPONSIVIDADE
+   ===================================================== */
+
+
+/* =====================================================
+   TELAS GRANDES
+   1281px ou mais
+   ===================================================== */
+
+@media (min-width: 1281px) {
+
   .header__toggle {
     display: none;
   }
-}
 
-@media (max-width: 480px) {
-  .logo-img--header-principal,
-  .logo-img--header {
-    height: 52px;
+  .nav {
+    display: flex;
   }
 
+  .hero {
+    padding: 4rem 0 4.5rem;
+  }
+
+  .hero__logo-ifpi img {
+    height: 230px;
+    max-width: 440px;
+  }
+
+  .hero__logos {
+    gap: 2rem;
+  }
+
+  .hero__logos img,
   .logo-img--hero-principal,
-  .logo-img--hero,
-  .hero__logos .logo-placeholder {
-    height: 48px;
+  .logo-img--hero {
+    height: 88px;
+  }
+
+  .apoiadores-demais__grid {
+    gap: 3rem 3.5rem;
+  }
+
+  .logo-img--apoiador,
+  .apoiadores-demais__grid .logo-placeholder {
+    height: 80px;
+    max-width: 230px;
   }
 }
+
+
+/* =====================================================
+   NOTEBOOKS / TABLETS GRANDES
+   769px até 1280px
+   ===================================================== */
 
 @media (max-width: 1280px) {
+
+  :root {
+    --espaco-secao: 4rem;
+  }
+
+  .header__bar {
+    min-height: 70px;
+  }
+
+  .header__logos {
+    gap: 0.7rem;
+  }
+
   .header__toggle {
     display: flex;
   }
@@ -818,67 +1014,73 @@ h1, h2, h3 {
     display: block;
   }
 
-  .header__bar {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centraliza horizontalmente tudo dentro da barra */
-    width: 100%;
-  }
-
-  .nav{
-    margin: 0 auto;
-  }
-
   .nav__list {
-    display: flex;
+    gap: 1.5rem;
     justify-content: center;
-    align-items: center;
-    gap: 1.5rem; /* Espaçamento entre os links do menu */
-    list-style: none;
-    margin: 0;
-    padding: 0;
   }
 
   .nav__link {
-    position: relative;
-    text-decoration: none;
-    color: var(--cor-texto);
     font-size: 0.95rem;
-    font-weight: 500;
-    padding-bottom: 4px;
-    white-space: nowrap;   /* adicionar esta linha */
   }
 
-  .nav__link::after {
-    display: none;
+  .hero {
+    padding: 3rem 0 3.5rem;
   }
 
+  .hero__logo-ifpi img {
+    height: 210px;
+    max-width: 400px;
+  }
+
+  /*
+     Mantém os 3 eventos lado a lado
+  */
+  .hero__logos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .hero__logos img,
+  .logo-img--hero-principal,
+  .logo-img--hero {
+    height: 75px;
+  }
+
+  .hero__logos .logo-placeholder {
+    height: 75px;
+  }
+
+  /*
+     Cards passam para uma coluna
+     em telas menores
+  */
   .cards,
   .cards--eventos,
   .cards--inscricoes {
     grid-template-columns: 1fr;
   }
 
-  .hero {
-    padding: 2.75rem 0 3rem;
+  .cronograma__item {
+    grid-template-columns: 1fr;
   }
 
-  .hero__logos {
-    gap: 1.1rem;
+  .cronograma__responsavel,
+  .cronograma__local {
+    grid-column: 1 / 2;
   }
 
-  .logo-img--hero-principal,
-  .hero__logos .logo-placeholder.logo-img--hero-principal {
-    height: 64px;
+  /*
+     Apoiadores continuam 3 x 2
+  */
+  .apoiadores-demais__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem 2rem;
   }
 
-  .logo-img--hero,
-  .hero__logos .logo-placeholder {
-    height: 64px;
-  }
-
-  .header__logos {
-    gap: 0.7rem;
+  .logo-img--apoiador,
+  .apoiadores-demais__grid .logo-placeholder {
+    height: 68px;
+    max-width: 190px;
   }
 
   .card__botoes {
@@ -893,61 +1095,359 @@ h1, h2, h3 {
     min-width: 130px;
     text-align: center;
   }
+}
 
-  .cronograma__item {
-    grid-template-columns: 1fr;
-  }
 
-  .cronograma__responsavel,
-  .cronograma__local {
-    grid-column: 1 / 2;
-  }
+/* =====================================================
+   TABLETS / CELULARES GRANDES
+   701px até 768px
+   ===================================================== */
+
+@media (max-width: 768px) {
 
   :root {
     --espaco-secao: 3.5rem;
   }
 
-  .logo-img--apoiador,
-  .apoiadores-demais__grid .logo-placeholder {
-    height: 38px;
-  }
-}
-
-@media (max-width: 700px) {
-  .apoiadores-demais__grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem 1rem;
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-   .hero__logos img {
+  .header__bar {
+    min-height: 68px;
+  }
+
+  .header__logos {
+    gap: 0.5rem;
+  }
+
+  .logo-img--header-principal,
+  .logo-img--header {
     height: 58px;
   }
 
+  .hero {
+    padding: 2.75rem 0 3.25rem;
+  }
+
+  /*
+     IFPI continua sendo grande
+  */
+  .hero__logo-ifpi {
+    margin-bottom: 1.25rem;
+  }
+
+  .hero__logo-ifpi img {
+    height: 180px;
+    max-width: 340px;
+  }
+
+  /*
+     Os 3 eventos continuam lado a lado
+  */
+  .hero__logos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .hero__logos img,
+  .logo-img--hero-principal,
+  .logo-img--hero {
+    height: 62px;
+  }
+
+  .hero__logos .logo-placeholder {
+    height: 62px;
+    padding: 0 0.4rem;
+  }
+
+  .hero__logos .logo-placeholder span {
+    font-size: 0.75rem;
+  }
+
+  /*
+     Apoiadores continuam 3 x 2
+  */
+  .apoiadores-demais__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.75rem 1rem;
+  }
+
   .logo-img--apoiador,
   .apoiadores-demais__grid .logo-placeholder {
-    height: 45px;
-    max-width: 130px;
+    height: 60px;
+    max-width: 150px;
+  }
+
+  .apoiador-destaque {
+    padding: 1.75rem 1rem;
+  }
+
+  .apoiador-destaque img,
+  .apoiador-destaque .logo-img--lims {
+    height: 180px;
+    max-width: 85%;
+  }
+
+  .footer__brand {
+    gap: 0.9rem;
   }
 }
 
-@media (max-width: 450px) {
+
+/* =====================================================
+   CELULARES
+   até 600px
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+  .header__bar {
+    padding: 0 0.75rem;
+  }
+
+  .hero {
+    padding: 2.5rem 0 3rem;
+  }
+
+  /*
+     IFPI
+  */
+  .hero__logo-ifpi img {
+    height: 160px;
+    max-width: 300px;
+  }
+
+  /*
+     Eventos continuam 3 lado a lado.
+     O tamanho diminui para evitar vazamento.
+  */
+  .hero__logos {
+    gap: 0.5rem;
+  }
+
+  .hero__logos img,
+  .logo-img--hero-principal,
+  .logo-img--hero {
+    height: 54px;
+  }
+
+  .hero__logos .logo-placeholder {
+    height: 54px;
+  }
+
+  .hero__title {
+    font-size: clamp(1.8rem, 7vw, 2.35rem);
+  }
+
+  .hero__subtitulo {
+    font-size: 0.95rem;
+  }
+
+  .hero__data {
+    font-size: 1.05rem;
+  }
+
+  /*
+     Apoiadores continuam 3 x 2
+  */
   .apoiadores-demais__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem 0.5rem;
+  }
+
+  .logo-img--apoiador,
+  .apoiadores-demais__grid .logo-placeholder {
+    height: 52px;
+    max-width: 125px;
+  }
+
+  .apoiador-destaque img,
+  .apoiador-destaque .logo-img--lims {
+    height: 160px;
+    max-width: 82%;
+  }
+
+  .apoiador-destaque .logo-placeholder {
+    height: 140px;
+  }
+
+  .cards {
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .section__title {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* =====================================================
+   CELULARES PEQUENOS
+   até 450px
+   ===================================================== */
+
+@media (max-width: 450px) {
+
+  :root {
+    --espaco-secao: 3rem;
+  }
+
+  .container {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .header__bar {
+    min-height: 64px;
+  }
+
+  .logo-img--header-principal,
+  .logo-img--header {
+    height: 52px;
+  }
+
+  /*
+     IFPI continua com bastante destaque,
+     mas sem estourar a largura do celular.
+  */
+  .hero__logo-ifpi img {
+    height: 140px;
+    max-width: 270px;
+  }
+
+  /*
+     Eventos permanecem 3 lado a lado.
+  */
+  .hero__logos {
+    gap: 0.25rem;
+  }
+
+  .hero__logos img,
+  .logo-img--hero-principal,
+  .logo-img--hero {
+    height: 48px;
+  }
+
+  .hero__logos .logo-placeholder {
+    height: 48px;
+    padding: 0 0.25rem;
+  }
+
+  .hero__logos .logo-placeholder span {
+    font-size: 0.65rem;
+  }
+
+  /*
+     Em celulares muito pequenos,
+     os apoiadores passam para 2 colunas.
+
+     Resultado:
+     2 + 2 + 2
+  */
+  .apoiadores-demais__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem 0.75rem;
   }
 
   .logo-img--apoiador,
   .apoiadores-demais__grid .logo-placeholder {
-    height: 42px;
-    max-width: 120px;
+    height: 50px;
+    max-width: 125px;
   }
 
-  .hero__logos img {
-    height: 50px;
+  .apoiador-destaque {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .apoiador-destaque img,
+  .apoiador-destaque .logo-img--lims {
+    height: 140px;
+    max-width: 85%;
+  }
+
+  .apoiador-destaque .logo-placeholder {
+    height: 120px;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+  }
+
+  .card__botoes {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .card__botoes .btn {
+    width: 100%;
   }
 }
 
+
+/* =====================================================
+   CELULARES MUITO PEQUENOS
+   até 360px
+   ===================================================== */
+
+@media (max-width: 360px) {
+
+  .hero {
+    padding-top: 2rem;
+  }
+
+  .hero__logo-ifpi img {
+    height: 120px;
+    max-width: 230px;
+  }
+
+  /*
+     Ainda mantém os 3 eventos,
+     mas reduz um pouco mais.
+  */
+  .hero__logos img,
+  .logo-img--hero-principal,
+  .logo-img--hero {
+    height: 42px;
+  }
+
+  .hero__logos .logo-placeholder {
+    height: 42px;
+  }
+
+  .hero__logos .logo-placeholder span {
+    font-size: 0.58rem;
+  }
+
+  .logo-img--apoiador,
+  .apoiadores-demais__grid .logo-placeholder {
+    height: 45px;
+    max-width: 110px;
+  }
+
+  .apoiador-destaque img,
+  .apoiador-destaque .logo-img--lims {
+    height: 125px;
+  }
+}
+
+
+/* =====================================================
+   REDUÇÃO DE MOVIMENTO
+   ===================================================== */
+
 @media (prefers-reduced-motion: reduce) {
+
   html {
     scroll-behavior: auto;
   }
@@ -955,11 +1455,5 @@ h1, h2, h3 {
   .nav__link::after {
     transition: none;
   }
-}
 
-/* Foco visível para navegação por teclado */
-a:focus-visible,
-button:focus-visible {
-  outline: 3px solid var(--cor-azul);
-  outline-offset: 2px;
 }
