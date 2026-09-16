@@ -775,7 +775,6 @@ button:focus-visible {
    APOIADORES E REALIZAÇÃO
    ===================================================== */
 
-
 /* -----------------------------------------------------
    LIMS — APOIADOR PRINCIPAL
    ----------------------------------------------------- */
@@ -827,6 +826,73 @@ button:focus-visible {
   font-size: 1.3rem;
 }
 
+/* -----------------------------------------------------
+   REALIZAÇÃO
+   LIMS + duas instituições
+   ----------------------------------------------------- */
+
+.realizacao__grid {
+  display: grid;
+
+  /* 3 logos lado a lado */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  align-items: center;
+  justify-items: center;
+
+  gap: 2rem;
+
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto;
+}
+
+.realizacao__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-width: 0;
+
+  height: 120px;
+}
+
+.logo-img--realizacao {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 90%;
+  max-height: 100px;
+
+  object-fit: contain;
+}
+
+/* Logos de realização */
+/* Ajuste do tamanho das logos de realização */
+.realizacao__logo:nth-child(1) .logo-img--realizacao {
+  height: 130px;
+  max-height: 130px;
+  width: auto;
+  max-width: 100%;
+}
+
+.realizacao__logo:nth-child(2) .logo-img--realizacao {
+  height: 180px;
+  max-height: 180px;
+  width: auto;
+  max-width: 100%;
+}
+
+.realizacao__logo:nth-child(3) .logo-img--realizacao {
+  height: 100px;
+  max-height: 100px;
+  width: auto;
+  max-width: 100%;
+}
 
 /* -----------------------------------------------------
    DEMAIS APOIADORES
@@ -979,6 +1045,23 @@ button:focus-visible {
     height: 80px;
     max-width: 230px;
   }
+
+  .realizacao__grid {
+    gap: 2.5rem;
+  }
+
+  .realizacao__logo {
+    height: 125px;
+  }
+
+  .logo-img--realizacao {
+    display: block;
+    width: auto;
+    height: 115px;
+    max-width: 100%;
+    max-height: 115px;
+    object-fit: contain;
+  }
 }
 
 
@@ -1095,8 +1178,21 @@ button:focus-visible {
     min-width: 130px;
     text-align: center;
   }
-}
 
+  .realizacao__grid {
+    gap: 1.5rem;
+  }
+
+  .realizacao__logo {
+    height: 110px;
+  }
+
+  .logo-img--realizacao {
+    height: 105px;
+    max-height: 105px;
+    max-width: 100%;
+  }
+}
 
 /* =====================================================
    TABLETS / CELULARES GRANDES
@@ -1192,6 +1288,19 @@ button:focus-visible {
 
   .footer__brand {
     gap: 0.9rem;
+  }
+
+  .realizacao__grid {
+    gap: 0.75rem;
+  }
+
+  .realizacao__logo {
+    height: 90px;
+  }
+
+  .logo-img--realizacao {
+    max-height: 75px;
+    max-width: 92%;
   }
 }
 
@@ -1392,8 +1501,21 @@ button:focus-visible {
   .card__botoes .btn {
     width: 100%;
   }
-}
 
+  .realizacao__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.4rem;
+  }
+
+  .realizacao__logo {
+    height: 70px;
+  }
+
+  .logo-img--realizacao {
+    max-height: 60px;
+    max-width: 95%;
+  }
+}
 
 /* =====================================================
    CELULARES MUITO PEQUENOS
@@ -1439,6 +1561,22 @@ button:focus-visible {
   .apoiador-destaque .logo-img--lims {
     height: 125px;
   }
+
+  @media (max-width: 360px) {
+
+  .realizacao__grid {
+    gap: 0.25rem;
+  }
+
+  .realizacao__logo {
+    height: 60px;
+  }
+
+  .logo-img--realizacao {
+    max-height: 50px;
+    max-width: 100%;
+  }
+}
 }
 
 

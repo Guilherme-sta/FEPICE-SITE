@@ -91,6 +91,22 @@ const SITE_CONFIG = {
       disponivel: true,
       logo: "assets/logo/logo-lims.png" 
     },
+
+    realizacao: [
+      {
+        nome: "DPI",
+        logo: "assets/logo/logo-dpi.png",
+      },
+      {
+        nome: "LIMS",
+        logo: "assets/logo/logo-lims.png",
+      },
+      {
+        nome: "ADS",
+        logo: "assets/logo/logo-ads.png",
+      }
+    ],
+
     demais: [
       {nome: "InvestePiaui", logo: "assets/logo/logo-investepiaui.png"},
       {nome: "SEBRAE", logo: "assets/logo/logo-sebrae.jpeg"},
