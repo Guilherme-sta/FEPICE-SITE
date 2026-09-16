@@ -770,6 +770,179 @@ button:focus-visible {
   grid-column: 2 / 3;
 }
 
+/* -----------------------------------------------------
+   CRONOGRAMA - DIAS
+   ----------------------------------------------------- */
+
+.cronograma__dias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 0.75rem;
+
+  margin-bottom: 1.25rem;
+}
+
+.cronograma__dia {
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+
+  background: var(--cor-fundo);
+
+  color: var(--cor-texto);
+
+  padding: 0.65rem 1.25rem;
+
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.cronograma__dia:hover {
+  border-color: var(--cor-azul);
+}
+
+.cronograma__dia.is-active {
+  background: var(--cor-azul);
+  border-color: var(--cor-azul);
+
+  color: white;
+}
+
+/* -----------------------------------------------------
+   CRONOGRAMA - CATEGORIAS
+   ----------------------------------------------------- */
+
+.cronograma__categorias {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 0.5rem;
+
+  margin-bottom: 2rem;
+}
+
+.cronograma__tab {
+  border: 1px solid var(--cor-borda);
+  border-radius: 999px;
+
+  background: var(--cor-fundo-alt);
+
+  color: var(--cor-texto);
+
+  padding: 0.55rem 1rem;
+
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.cronograma__tab:hover {
+  border-color: var(--cor-azul);
+}
+
+.cronograma__tab.is-active {
+  background: var(--cor-azul);
+
+  border-color: var(--cor-azul);
+
+  color: white;
+}
+
+/* -----------------------------------------------------
+   CRONOGRAMA - ATIVIDADES
+   ----------------------------------------------------- */
+
+.cronograma__lista {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.75rem;
+}
+
+.cronograma__item {
+  display: grid;
+
+  grid-template-columns: 90px minmax(0, 1fr);
+
+  align-items: center;
+
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+
+  background: var(--cor-fundo);
+
+  overflow: hidden;
+}
+
+.cronograma__horario {
+  align-self: stretch;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: var(--cor-fundo-alt);
+
+  border-right: 1px solid var(--cor-borda);
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  color: var(--cor-azul);
+}
+
+.cronograma__informacoes {
+  padding: 0.9rem 1rem;
+}
+
+.cronograma__titulo {
+  margin: 0;
+
+  font-size: 0.95rem;
+  line-height: 1.4;
+
+  color: var(--cor-texto);
+}
+
+.cronograma__responsavel {
+  margin: 0.35rem 0 0;
+
+  font-size: 0.8rem;
+
+  color: var(--cor-texto-suave);
+}
+
+.cronograma__local {
+  margin: 0.35rem 0 0;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  color: var(--cor-texto-suave);
+}
 
 /* =====================================================
    APOIADORES E REALIZAÇÃO
@@ -1531,6 +1704,46 @@ button:focus-visible {
   .logo-img--realizacao {
     max-height: 60px;
     max-width: 95%;
+  }
+
+  .cronograma__dias {
+    gap: 0.5rem;
+  }
+
+  .cronograma__dia {
+    flex: 1 1 calc(50% - 0.5rem);
+
+    padding: 0.6rem 0.75rem;
+
+    font-size: 0.82rem;
+  }
+
+  .cronograma__categorias {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .cronograma__tab {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .cronograma__item {
+    grid-template-columns: 70px minmax(0, 1fr);
+  }
+
+  .cronograma__horario {
+    font-size: 0.78rem;
+  }
+
+  .cronograma__informacoes {
+    padding: 0.75rem;
+  }
+
+  .cronograma__titulo {
+    font-size: 0.85rem;
   }
 }
 
