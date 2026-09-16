@@ -251,19 +251,51 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ---------- Apoiadores e Realização ---------- */
-  const limsArea = document.getElementById("apoiador-lims");
-  if (limsArea) {
-    const lims = SITE_CONFIG.apoiadores.lims;
-    const temLogo = lims && lims.disponivel && lims.logo;
 
-    const conteudoLogo = temLogo
-      ? `<img src="${lims.logo}" alt="${lims.nome || "LIMS"}" class="logo-img--lims">`
-      : `<div class="logo-placeholder logo-img--lims"><span>${lims?.nome || "LIMS"}</span></div>`;
+  const realizacaoArea = document.getElementById("apoiador-realizacao");
 
-    limsArea.innerHTML = `
-      <p class="apoiador-destaque__rotulo">Realização</p>
-      ${conteudoLogo}
-    `;
+  if (realizacaoArea) {
+
+    const realizacao = SITE_CONFIG.apoiadores.realizacao || [];
+
+    if (realizacao.length === 0) {
+
+      realizacaoArea.innerHTML = `
+        <p class="apoiador-destaque__rotulo">Realização</p>
+
+        <div class="status-box">
+          <p>Informações sobre a realização serão divulgadas em breve.</p>
+        </div>
+      `;
+
+    } else {
+
+      realizacaoArea.innerHTML = `
+        <p class="apoiador-destaque__rotulo">Realização</p>
+
+        <div class="realizacao__grid">
+          ${realizacao.map((item) => `
+            <div class="realizacao__logo">
+
+              ${
+                item.logo
+                  ? `<img
+                      src="${item.logo}"
+                      alt="${item.nome}"
+                      class="logo-img--realizacao"
+                    >`
+                  : `
+                    <div class="logo-placeholder logo-img--realizacao">
+                      <span>${item.nome}</span>
+                    </div>
+                  `
+              }
+
+            </div>
+          `).join("")}
+        </div>
+      `;
+    }
   }
 
   const demaisArea = document.getElementById("apoiadores-demais");
