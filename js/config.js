@@ -57,7 +57,7 @@ const SITE_CONFIG = {
       nomeCompleto: "1ª Edição do Ciclo de Inovação",
       logo: "assets/logo/logo-ideialab.png",
       sobreDisponivel: true,
-      sobreTexto: "A <b>Competição de Ideias – IdeiaLab 2026</b> será realizada pelo Campus Teresina Central do Instituto Federal do Piauí (IFPI), por meio da <b>Diretoria de Pesquisa, Pós-Graduação e Inovação (DPI)</b>, em parceria com o <b>Sebrae Piauí</b>, a <b>Invest Piauí</b>, o <b>InovaIFPI</b>, o <b>Núcleo de Empreendedorismo e Inovação (NEPI)</b>, o <b>Núcleo de Inovação Tecnológica (NIT)</b>, a <b>FAPEPI</b> e a <b>FAIFPI</b>. O evento tem como objetivo estimular a criatividade, a inovação e o empreendedorismo entre os estudantes, promovendo soluções para desafios reais do campus. As inscrições, gratuitas, ocorrem de 07 a 30 de setembro de 2026, sendo destinadas a equipes formadas por discentes regularmente matriculados e um servidor orientador. <b>Premiação:</b> bolsas para 03 equipes de <b>R$500,00</b> por 06 meses",
+      sobreTexto: "A <b>Competição de Ideias – IdeiaLab 2026</b> será realizada pelo Campus Teresina Central do Instituto Federal do Piauí (IFPI), por meio da <b>Diretoria de Pesquisa, Pós-Graduação e Inovação (DPI)</b>, em parceria com o <b>Sebrae Piauí</b>, a <b>Invest Piauí</b>, o <b>InovaIFPI</b>, o <b>Núcleo de Empreendedorismo e Inovação (NEPI)</b>, o <b>Núcleo de Inovação Tecnológica (NIT)</b>, a <b>FAPEPI</b> e a <b>FAIFPI</b>. O evento tem como objetivo estimular a criatividade, a inovação e o empreendedorismo entre os estudantes, promovendo soluções para desafios reais do campus. As inscrições, gratuitas, ocorrem de 07 a 30 de setembro de 2026, sendo destinadas a equipes formadas por discentes regularmente matriculados e um servidor orientador. <b>Premiação:</b> bolsas de <b>R$500,00</b> por 06 meses para cada aluno(a) das equipes selecionadas",
       inscricao: {
         disponivel: true,
         url: "https://forms.gle/dLEgLeR58XUi2jW7A"
@@ -383,7 +383,7 @@ const SITE_CONFIG = {
 
     demais: [
       {nome: "InvestePiaui", logo: "assets/logo/logo-investepiaui.png"},
-      {nome: "SEBRAE", logo: "assets/logo/logo-sebrae.jpeg"},
+      {nome: "SEBRAE", logo: "assets/logo/logo-sebrae.png"},
       {nome: "FAPEPI", logo: "assets/logo/logo-fapepi.jpeg"},
       {nome: "INOVAIFPI", logo: "assets/logo/logo-inovaifpi.jpeg"},
       {nome: "NEPI", logo: "assets/logo/logo-nepi.jpeg"},
