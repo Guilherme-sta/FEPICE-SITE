@@ -131,59 +131,192 @@ document.addEventListener("DOMContentLoaded", () => {
     }).join("");
   }
 
-  /* ---------- Cronograma da semana ---------- */
-  const cronogramaTabs = document.getElementById("cronograma-tabs");
-  const cronogramaArea = document.getElementById("cronograma-area");
+/* ---------- Cronograma da semana ---------- */
 
-  if (cronogramaTabs && cronogramaArea && SITE_CONFIG.cronograma.showSchedule) {
-    const categorias = SITE_CONFIG.cronograma.categorias || [];
-    const itens = SITE_CONFIG.cronograma.itens || [];
+const cronogramaDias = document.getElementById("cronograma-dias");
+const cronogramaTabs = document.getElementById("cronograma-tabs");
+const cronogramaArea = document.getElementById("cronograma-area");
 
-    cronogramaTabs.hidden = false;
-    cronogramaTabs.innerHTML = categorias.map((cat, i) => `
-      <button class="cronograma__tab${i === 0 ? " is-active" : ""}"
-        role="tab" aria-selected="${i === 0}" data-categoria="${cat}">${cat}</button>
-    `).join("");
+if (
+  cronogramaDias &&
+  cronogramaTabs &&
+  cronogramaArea &&
+  SITE_CONFIG.cronograma.showSchedule
+) {
 
-    function renderCategoria(categoria) {
-      const doDia = (item) => `${item.dia || ""} ${item.horario || ""}`.trim();
-      const itensCategoria = itens
-        .filter((item) => item.categoria === categoria)
-        .sort((a, b) => doDia(a).localeCompare(doDia(b)));
+  const dias = SITE_CONFIG.cronograma.dias || [];
+  const categorias = SITE_CONFIG.cronograma.categorias || [];
+  const itens = SITE_CONFIG.cronograma.itens || [];
 
-      if (itensCategoria.length === 0) {
-        cronogramaArea.innerHTML = `<div class="status-box"><p>Programação de "${categoria}" será divulgada em breve.</p></div>`;
-        return;
-      }
+  let diaSelecionado = dias[0] || "";
+  let categoriaSelecionada = categorias[0] || "";
+
+  /* ---------- Formatar data ---------- */
+
+  function formatarDia(data) {
+    const partes = data.split("-");
+
+    return `${partes[2]}/${partes[1]}/${partes[0]}`;
+  }
+
+  /* ---------- Criar botões dos dias ---------- */
+
+  cronogramaDias.innerHTML = dias.map((dia, i) => `
+    <button
+      class="cronograma__dia ${i === 0 ? "is-active" : ""}"
+      type="button"
+      data-dia="${dia}"
+      aria-selected="${i === 0}"
+    >
+      ${formatarDia(dia)}
+    </button>
+  `).join("");
+
+  /* ---------- Criar botões das categorias ---------- */
+
+  cronogramaTabs.hidden = false;
+
+  cronogramaTabs.innerHTML = categorias.map((categoria, i) => `
+    <button
+      class="cronograma__tab ${i === 0 ? "is-active" : ""}"
+      type="button"
+      role="tab"
+      aria-selected="${i === 0}"
+      data-categoria="${categoria}"
+    >
+      ${categoria}
+    </button>
+  `).join("");
+
+  /* ---------- Mostrar atividades ---------- */
+
+  function renderCronograma() {
+
+    const atividades = itens.filter((item) =>
+      item.dia === diaSelecionado &&
+      item.categoria === categoriaSelecionada
+    );
+
+    if (atividades.length === 0) {
 
       cronogramaArea.innerHTML = `
-        <ul class="cronograma__lista">
-          ${itensCategoria.map((item) => `
-            <li class="cronograma__item">
-              <span class="cronograma__quando">${item.dia || ""} · ${item.horario || ""}</span>
-              <span class="cronograma__titulo">${item.titulo || ""}</span>
-              <span class="cronograma__responsavel">${item.responsavel || ""}</span>
-              <span class="cronograma__local">${item.local || ""}</span>
-            </li>
-          `).join("")}
-        </ul>
+        <div class="status-box">
+          <p>
+            Nenhuma atividade de
+            <strong>${categoriaSelecionada}</strong>
+            está cadastrada para o dia
+            <strong>${formatarDia(diaSelecionado)}</strong>.
+          </p>
+        </div>
       `;
+
+      return;
     }
 
-    cronogramaTabs.querySelectorAll(".cronograma__tab").forEach((btn) => {
+    /* Ordenar pelo horário */
+
+    atividades.sort((a, b) =>
+      (a.horario || "").localeCompare(b.horario || "")
+    );
+
+    cronogramaArea.innerHTML = `
+      <div class="cronograma__lista">
+
+        ${atividades.map((item) => `
+
+          <article class="cronograma__item">
+
+            <div class="cronograma__horario">
+              ${item.horario || ""}
+            </div>
+
+            <div class="cronograma__informacoes">
+
+              <h3 class="cronograma__titulo">
+                ${item.titulo || ""}
+              </h3>
+
+              ${
+                item.responsavel
+                  ? `
+                    <p class="cronograma__responsavel">
+                      ${item.responsavel}
+                    </p>
+                  `
+                  : ""
+              }
+
+              <p class="cronograma__local">
+                Local:
+                ${item.local || "A definir"}
+              </p>
+
+            </div>
+
+          </article>
+
+        `).join("")}
+
+      </div>
+    `;
+  }
+
+  /* ---------- Clique nos dias ---------- */
+
+  cronogramaDias
+    .querySelectorAll(".cronograma__dia")
+    .forEach((btn) => {
+
       btn.addEventListener("click", () => {
-        cronogramaTabs.querySelectorAll(".cronograma__tab").forEach((b) => {
-          b.classList.remove("is-active");
-          b.setAttribute("aria-selected", "false");
-        });
+
+        cronogramaDias
+          .querySelectorAll(".cronograma__dia")
+          .forEach((b) => {
+            b.classList.remove("is-active");
+            b.setAttribute("aria-selected", "false");
+          });
+
         btn.classList.add("is-active");
         btn.setAttribute("aria-selected", "true");
-        renderCategoria(btn.dataset.categoria);
+
+        diaSelecionado = btn.dataset.dia;
+
+        renderCronograma();
       });
+
     });
 
-    if (categorias.length > 0) renderCategoria(categorias[0]);
+  /* ---------- Clique nas categorias ---------- */
+
+  cronogramaTabs
+    .querySelectorAll(".cronograma__tab")
+    .forEach((btn) => {
+
+      btn.addEventListener("click", () => {
+
+        cronogramaTabs
+          .querySelectorAll(".cronograma__tab")
+          .forEach((b) => {
+            b.classList.remove("is-active");
+            b.setAttribute("aria-selected", "false");
+          });
+
+        btn.classList.add("is-active");
+        btn.setAttribute("aria-selected", "true");
+
+        categoriaSelecionada = btn.dataset.categoria;
+
+        renderCronograma();
+      });
+
+    });
+
+  /* ---------- Exibir primeira combinação ---------- */
+
+  if (dias.length > 0 && categorias.length > 0) {
+    renderCronograma();
   }
+}
 
   /* ---------- Materiais ---------- */
 
