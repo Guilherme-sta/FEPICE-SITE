@@ -31,7 +31,7 @@ const SITE_CONFIG = {
       nomeCompleto: "2ª Feira Piauiense de Ciências e Engenharia",
       logo: "assets/logo/logo-fepice-oficial.png",
       sobreDisponivel: true,
-      sobreTexto: "A II Feira Piauiense de Ciências e Engenharia – FEPICE será realizada de 06 a 09 de outubro de 2026, no Campus Teresina Central do Instituto Federal do Piauí (IFPI), em Teresina/PI. É um evento gratuito e de abrangência estadual, destinado a estudantes do 8º e 9º anos do Ensino Fundamental, do Ensino Médio e do Ensino Técnico.",
+      sobreTexto: "A <b>II Feira Piauiense de Ciências e Engenharia – FEPICE</b> será realizada no Campus Teresina Central do Instituto Federal do Piauí (IFPI), em Teresina/PI. É um evento gratuito e de abrangência estadual, destinado a estudantes do 8º e 9º anos do Ensino Fundamental, do Ensino Médio e do Ensino Técnico. As inscrições, gratuitas, ocorrem de 15 a 25 de setembro de 2026, sendo destinadas a equipes formadas por discentes regularmente matriculados e seus servidores orientadores.",
       inscricao: {
         disponivel: true,
         url: "https://forms.gle/S7zV8ow6jTha5kDH8"
@@ -45,8 +45,8 @@ const SITE_CONFIG = {
       nome: "Teresina Info 2026",
       nomeCompleto: "5ª Edição do Encontro de Informática em Teresina",
       logo: "assets/logo/logo-teresina-info.png", 
-      sobreDisponivel: false,
-      sobreTexto: "",
+      sobreDisponivel: true,
+      sobreTexto: "O Campus Teresina Central do Instituto Federal do Piauí (IFPI) promove o Encontro de Informática de Teresina, organizado pelo <b>Laboratory of Innovation on Multimedia Systems (LIMS)</b>, com o tema <b>Tecnologia e Inteligência Artificial: Transformando o Futuro.</b> O evento tem como objetivo promover conhecimento através de palestras e minicursos sobre temas como inteligência artificial, programação, empreendedorismo, entre outros. As inscrições, gratuitas, ocorrem de 16 de setembro a 08 de outubro de 2026, sendo destinadas ao público geral.",
       inscricao: {
         disponivel: true,
         url: "https://suap.ifpi.edu.br/eventos/inscricao/1/4052/"
@@ -56,8 +56,8 @@ const SITE_CONFIG = {
       nome: "IdeiaLab 2026",
       nomeCompleto: "1ª Edição do Ciclo de Inovação",
       logo: "assets/logo/logo-ideialab.png",
-      sobreDisponivel: false,
-      sobreTexto: "",
+      sobreDisponivel: true,
+      sobreTexto: "A <b>Competição de Ideias – IdeiaLab 2026</b> será realizada pelo Campus Teresina Central do Instituto Federal do Piauí (IFPI), por meio da <b>Diretoria de Pesquisa, Pós-Graduação e Inovação (DPI)</b>, em parceria com o <b>Sebrae Piauí</b>, a <b>Invest Piauí</b>, o <b>InovaIFPI</b>, o <b>Núcleo de Empreendedorismo e Inovação (NEPI)</b>, o <b>Núcleo de Inovação Tecnológica (NIT)</b>, a <b>FAPEPI</b> e a <b>FAIFPI</b>. O evento tem como objetivo estimular a criatividade, a inovação e o empreendedorismo entre os estudantes, promovendo soluções para desafios reais do campus. As inscrições, gratuitas, ocorrem de 07 a 30 de setembro de 2026, sendo destinadas a equipes formadas por discentes regularmente matriculados e um servidor orientador.",
       inscricao: {
         disponivel: true,
         url: "https://forms.gle/dLEgLeR58XUi2jW7A"
@@ -110,10 +110,11 @@ const SITE_CONFIG = {
     demais: [
       {nome: "InvestePiaui", logo: "assets/logo/logo-investepiaui.png"},
       {nome: "SEBRAE", logo: "assets/logo/logo-sebrae.jpeg"},
+      {nome: "FAPEPI", logo: "assets/logo/logo-fapepi.jpeg"},
       {nome: "INOVAIFPI", logo: "assets/logo/logo-inovaifpi.jpeg"},
       {nome: "NEPI", logo: "assets/logo/logo-nepi.jpeg"},
       {nome: "NIT", logo: "assets/logo/logo-nit.jpeg"},
-      {nome: "FAPEPI", logo: "assets/logo/logo-fapepi.jpeg"},
+      {nome: "FAIFPI", logo: "assets/logo/logo-faifpi.png"},
       // { nome: "", logo: "" }  ← preencher e adicionar a imagem em assets/logo/
     ]
   }
