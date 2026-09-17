@@ -99,22 +99,28 @@ document.addEventListener("DOMContentLoaded", () => {
       const ev = SITE_CONFIG.eventos[chave];
 
       const acao = `
-    <div class="card__botoes">
+        <div class="card__botoes">
+          ${
+            ev.inscricao.disponivel && ev.inscricao.url
+              ? `<a class="btn btn--primary" href="${ev.inscricao.url}" target="_blank" rel="noopener">Inscrever-se</a>`
+              : `<span class="card__status">Inscrições em breve</span>`
+          }
 
-      ${
-        ev.inscricao.disponivel && ev.inscricao.url
-          ? `<a class="btn btn--primary" href="${ev.inscricao.url}" target="_blank" rel="noopener">Inscrever-se</a>`
-          : `<span class="card__status">Inscrições em breve</span>`
-      }
+          ${
+            ev.edital && ev.edital.disponivel && ev.edital.url
+              ? `<a class="btn btn--secondary" href="${ev.edital.url}" target="_blank" rel="noopener">Edital</a>`
+              : ""
+          }
 
-      ${
-        ev.edital && ev.edital.disponivel && ev.edital.url
-          ? `<a class="btn btn--secondary" href="${ev.edital.url}" target="_blank" rel="noopener">Edital</a>`
-          : ""
-      }
-
-    </div>
-  `;
+          ${
+            ev.palestraSebrae &&
+            ev.palestraSebrae.disponivel &&
+            ev.palestraSebrae.url
+              ? `<a class="btn btn--primary" href="${ev.palestraSebrae.url}" target="_blank" rel="noopener">Palestra Sebrae</a>`
+              : ""
+          }
+        </div>
+      `;
 
       return `
         <article class="card card--evento" id="evento-inscricao-${chave}">
