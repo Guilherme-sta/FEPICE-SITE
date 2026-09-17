@@ -1128,6 +1128,17 @@ button:focus-visible {
 }
 
 /* =====================================================
+   DEMAIS APOIADORES (SEM CAIXINHAS)
+   ===================================================== */
+
+.apoiadores-demais__grid .logo-placeholder,
+.apoiadores-demais__grid .logo-box {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* =====================================================
    FOOTER
    ===================================================== */
 
