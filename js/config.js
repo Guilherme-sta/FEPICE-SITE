@@ -386,13 +386,13 @@ const SITE_CONFIG = {
     ],
 
     demais: [
-      {nome: "InvestePiaui", logo: "assets/logo/logo-investepiaui.png"},
-      {nome: "SEBRAE", logo: "assets/logo/logo-sebrae.png"},
-      {nome: "FAPEPI", logo: "assets/logo/logo-fapepi.jpeg"},
       {nome: "INOVAIFPI", logo: "assets/logo/logo-inovaifpi.jpeg"},
       {nome: "NEPI", logo: "assets/logo/logo-nepi.jpeg"},
       {nome: "NIT", logo: "assets/logo/logo-nit.jpeg"},
       {nome: "FAIFPI", logo: "assets/logo/logo-faifpi.png"},
+      {nome: "InvestePiaui", logo: "assets/logo/logo-investepiaui.png"},
+      {nome: "SEBRAE", logo: "assets/logo/logo-sebrae.png"},
+      {nome: "FAPEPI", logo: "assets/logo/logo-fapepi.png"},
       // { nome: "", logo: "" }  ← preencher e adicionar a imagem em assets/logo/
     ]
   }
