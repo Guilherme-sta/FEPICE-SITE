@@ -294,29 +294,44 @@ button:focus-visible {
    ----------------------------------------------------- */
 
 .hero__logos {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
   align-items: center;
-  justify-items: center;
-  gap: 2rem;
+  justify-content: center;
   width: 100%;
-  max-width: 1000px; /* Aumentado de 820px para dar mais espaço de expansão */
+  max-width: 900px;
   margin: 0 auto;
+  gap: 1rem;
 }
 
-.hero__logos img,
-.logo-img--hero-principal,
-.logo-img--hero {
-  height: 120px; /* Aumentado de 82px para 120px */
+.hero__logos > * {
+  flex: 1 1 0;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 180px;
+}
+
+.hero__logos img {
+  display: block;
   width: auto;
   max-width: 100%;
   object-fit: contain;
 }
 
-.hero__logos .logo-placeholder {
-  width: 100%;
-  max-width: 280px;
-  height: 120px;
+/* Proporção individual de cada logo */
+.hero__logos > *:nth-child(1) img {
+  height: 120px; /* FEPICE */
+}
+
+.hero__logos > *:nth-child(2) img {
+  height: 180px; /* TeresinaInfo */
+}
+
+.hero__logos > *:nth-child(3) img {
+  height: 180px; /* IdeiaLab */
 }
 
 /* -----------------------------------------------------
@@ -1199,13 +1214,24 @@ button:focus-visible {
   }
 
   .hero__logos {
+    max-width: 900px;
     gap: 2rem;
   }
 
-  .hero__logos img,
-  .logo-img--hero-principal,
-  .logo-img--hero {
-    height: 140px;
+  .hero__logos > * {
+    height: 180px;
+  }
+
+  .hero__logos > *:nth-child(1) img {
+    height: 120px; /* FEPICE */
+  }
+
+  .hero__logos > *:nth-child(2) img {
+    height: 180px; /* TeresinaInfo */
+  }
+
+  .hero__logos > *:nth-child(3) img {
+    height: 180px; /* IdeiaLab */
   }
 
   .apoiadores-demais__grid {
@@ -1292,18 +1318,24 @@ button:focus-visible {
      Mantém os 3 eventos lado a lado
   */
   .hero__logos {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 800px;
     gap: 1.5rem;
   }
 
-  .hero__logos img,
-  .logo-img--hero-principal,
-  .logo-img--hero {
-    height: 100px;
+  .hero__logos > * {
+    height: 140px;
   }
 
-  .hero__logos .logo-placeholder {
-    height: 100px;
+  .hero__logos > *:nth-child(1) img {
+    height: 90px; /* FEPICE */
+  }
+
+  .hero__logos > *:nth-child(2) img {
+    height: 125px; /* TeresinaInfo */
+  }
+
+  .hero__logos > *:nth-child(3) img {
+    height: 135px; /* IdeiaLab */
   }
 
   /*
@@ -1417,22 +1449,24 @@ button:focus-visible {
      Os 3 eventos continuam lado a lado
   */
   .hero__logos {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 650px;
     gap: 1rem;
   }
 
-  .hero__logos img,
-  .logo-img--hero-principal,
-  .logo-img--hero {
-    height: 80px;
+  .hero__logos > * {
+    height: 110px;
   }
 
-  .hero__logos .logo-placeholder {
-    height: 80px;
+  .hero__logos > *:nth-child(1) img {
+    height: 70px; /* FEPICE */
   }
 
-  .hero__logos .logo-placeholder span {
-    font-size: 0.75rem;
+  .hero__logos > *:nth-child(2) img {
+    height: 100px; /* TeresinaInfo */
+  }
+
+  .hero__logos > *:nth-child(3) img {
+    height: 105px; /* IdeiaLab */
   }
 
   /*
@@ -1507,17 +1541,24 @@ button:focus-visible {
      O tamanho diminui para evitar vazamento.
   */
   .hero__logos {
+    max-width: 100%;
     gap: 0.5rem;
   }
 
-  .hero__logos img,
-  .logo-img--hero-principal,
-  .logo-img--hero {
-    height: 65px;
+  .hero__logos > * {
+    height: 85px;
   }
 
-  .hero__logos .logo-placeholder {
-    height: 65px;
+  .hero__logos > *:nth-child(1) img {
+    height: 55px; /* FEPICE */
+  }
+
+  .hero__logos > *:nth-child(2) img {
+    height: 85px; /* TeresinaInfo */
+  }
+
+  .hero__logos > *:nth-child(3) img {
+    height: 80px; /* IdeiaLab */
   }
 
   .hero__title {
@@ -1612,18 +1653,20 @@ button:focus-visible {
     gap: 0.25rem;
   }
 
-  .hero__logos img,
-  .logo-img--hero-principal,
-  .logo-img--hero {
-    height: 55px;
+  .hero__logos > * {
+    height: 70px;
   }
 
-  .hero__logos .logo-placeholder {
-    height: 55px;
+  .hero__logos > *:nth-child(1) img {
+    height: 45px; /* FEPICE */
   }
 
-  .hero__logos .logo-placeholder span {
-    font-size: 0.65rem;
+  .hero__logos > *:nth-child(2) img {
+    height: 72px; /* TeresinaInfo */
+  }
+
+  .hero__logos > *:nth-child(3) img {
+    height: 65px; /* IdeiaLab */
   }
 
   /*
@@ -1751,18 +1794,24 @@ button:focus-visible {
      Ainda mantém os 3 eventos,
      mas reduz um pouco mais.
   */
-  .hero__logos img,
-  .logo-img--hero-principal,
-  .logo-img--hero {
-    height: 48px;
+  .hero__logos {
+    gap: 0.15rem;
   }
 
-  .hero__logos .logo-placeholder {
-    height: 48x;
+  .hero__logos > * {
+    height: 60px;
   }
 
-  .hero__logos .logo-placeholder span {
-    font-size: 0.58rem;
+  .hero__logos > *:nth-child(1) img {
+    height: 40px; /* FEPICE */
+  }
+
+  .hero__logos > *:nth-child(2) img {
+    height: 56px; /* TeresinaInfo */
+  }
+
+  .hero__logos > *:nth-child(3) img {
+    height: 55px; /* IdeiaLab */
   }
 
   .logo-img--apoiador,

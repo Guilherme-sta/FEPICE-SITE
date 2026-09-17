@@ -66,6 +66,10 @@ const SITE_CONFIG = {
         disponivel: true,
         url: "https://drive.google.com/file/d/1-vXz7_aqQpTMbT069W8nv_yms3bhcg5l/view?usp=sharing"
       },
+      palestraSebrae: {
+        disponivel: true,
+        url: "https://youtu.be/cB2znzeCyrI",
+      }
     }
   },
 
