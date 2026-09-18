@@ -137,6 +137,95 @@ document.addEventListener("DOMContentLoaded", () => {
     }).join("");
   }
 
+  function abrirModalPalestrante(chave) {
+
+  const palestrante = SITE_CONFIG.palestrantes[chave];
+
+  if (!palestrante) return;
+
+  const modal = document.getElementById("modal-palestrante");
+
+  if (!modal) return;
+
+  const foto = modal.querySelector(".palestrante-modal__foto");
+  const nome = modal.querySelector(".palestrante-modal__nome");
+  const cargo = modal.querySelector(".palestrante-modal__cargo");
+  const instituicao = modal.querySelector(".palestrante-modal__instituicao");
+  const resumo = modal.querySelector(".palestrante-modal__resumo");
+  const areas = modal.querySelector(".palestrante-modal__areas");
+
+  nome.textContent = palestrante.nome;
+  cargo.textContent = palestrante.cargo;
+  instituicao.textContent = palestrante.instituicao;
+  resumo.textContent = palestrante.resumo;
+
+  if (palestrante.foto) {
+    foto.src = palestrante.foto;
+    foto.alt = palestrante.nome;
+    foto.hidden = false;
+  } else {
+    foto.hidden = true;
+  }
+
+  if (palestrante.areas && palestrante.areas.length > 0) {
+
+    areas.innerHTML = palestrante.areas
+      .map((area) => `<span>${area}</span>`)
+      .join("");
+
+    areas.parentElement.hidden = false;
+
+  } else {
+
+    areas.innerHTML = "";
+    areas.parentElement.hidden = true;
+
+  }
+
+  modal.hidden = false;
+
+  document.body.classList.add("modal-aberto");
+
+}
+
+  function fecharModalPalestrante() {
+
+  const modal = document.getElementById("modal-palestrante");
+
+  if (!modal) return;
+
+  modal.hidden = true;
+
+  document.body.classList.remove("modal-aberto");
+
+}
+
+  const modalPalestrante =
+  document.getElementById("modal-palestrante");
+
+if (modalPalestrante) {
+
+  const botaoFechar =
+    modalPalestrante.querySelector(".palestrante-modal__fechar");
+
+  if (botaoFechar) {
+
+    botaoFechar.addEventListener("click", () => {
+      fecharModalPalestrante();
+    });
+
+  }
+
+  modalPalestrante.addEventListener("click", (event) => {
+
+    if (event.target === modalPalestrante) {
+      fecharModalPalestrante();
+    }
+
+  });
+
+}
+
 /* ---------- Cronograma da semana ---------- */
 
 const cronogramaDias = document.getElementById("cronograma-dias");
@@ -196,40 +285,47 @@ if (
 
   /* ---------- Mostrar atividades ---------- */
 
-  function renderCronograma() {
+function renderCronograma() {
 
-    const atividades = itens.filter((item) =>
-      item.dia === diaSelecionado &&
-      item.categoria === categoriaSelecionada
-    );
+  const atividades = itens.filter((item) =>
+    item.dia === diaSelecionado &&
+    item.categoria === categoriaSelecionada
+  );
 
-    if (atividades.length === 0) {
-
-      cronogramaArea.innerHTML = `
-        <div class="status-box">
-          <p>
-            Nenhuma atividade de
-            <strong>${categoriaSelecionada}</strong>
-            está cadastrada para o dia
-            <strong>${formatarDia(diaSelecionado)}</strong>.
-          </p>
-        </div>
-      `;
-
-      return;
-    }
-
-    /* Ordenar pelo horário */
-
-    atividades.sort((a, b) =>
-      (a.horario || "").localeCompare(b.horario || "")
-    );
+  if (atividades.length === 0) {
 
     cronogramaArea.innerHTML = `
-      <div class="cronograma__lista">
+      <div class="status-box">
+        <p>
+          Nenhuma atividade de
+          <strong>${categoriaSelecionada}</strong>
+          está cadastrada para o dia
+          <strong>${formatarDia(diaSelecionado)}</strong>.
+        </p>
+      </div>
+    `;
 
-        ${atividades.map((item) => `
+    return;
+  }
 
+  /* ---------- Ordenar pelo horário ---------- */
+
+  atividades.sort((a, b) =>
+    (a.horario || "").localeCompare(b.horario || "")
+  );
+
+  cronogramaArea.innerHTML = `
+    <div class="cronograma__lista">
+
+      ${atividades.map((item) => {
+
+        const palestrante =
+          item.palestrante &&
+          SITE_CONFIG.palestrantes[item.palestrante]
+            ? SITE_CONFIG.palestrantes[item.palestrante]
+            : null;
+
+        return `
           <article class="cronograma__item">
 
             <div class="cronograma__horario">
@@ -243,11 +339,16 @@ if (
               </h3>
 
               ${
-                item.responsavel
+                palestrante
                   ? `
-                    <p class="cronograma__responsavel">
-                      ${item.responsavel}
-                    </p>
+                    <button
+                      type="button"
+                      class="cronograma__palestrante"
+                      data-palestrante="${item.palestrante}"
+                    >
+                      Palestrante:
+                      <strong>${palestrante.nome}</strong>
+                    </button>
                   `
                   : ""
               }
@@ -260,12 +361,30 @@ if (
             </div>
 
           </article>
+        `;
 
-        `).join("")}
+      }).join("")}
 
-      </div>
-    `;
-  }
+    </div>
+  `;
+
+  /* ---------- Clique no palestrante ---------- */
+
+  cronogramaArea
+    .querySelectorAll(".cronograma__palestrante")
+    .forEach((botao) => {
+
+      botao.addEventListener("click", () => {
+
+        const chave = botao.dataset.palestrante;
+
+        abrirModalPalestrante(chave);
+
+      });
+
+    });
+
+}
 
   /* ---------- Clique nos dias ---------- */
 
@@ -451,4 +570,5 @@ if (
       `;
     }
   }
+
 });
