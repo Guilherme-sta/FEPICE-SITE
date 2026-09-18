@@ -73,6 +73,26 @@ const SITE_CONFIG = {
     }
   },
 
+  palestrantes: {
+    joseSoares: {
+      nome: "José Soares de Andrade Júnior",
+      cargo: "Professor Titular do Departamento de Física",
+      instituicao: "Universidade Federal do Ceará (UFC)",
+      foto: "assets/img/jose-soares-perfil.gif",
+
+      resumo:
+        "Professor Titular do Departamento de Física da UFC, bolsista de produtividade em pesquisa do CNPq nível 1A e membro da Academia Brasileira de Ciências. Atua nas áreas de Física Estatística, Física Computacional e Sistemas Complexos, com pesquisas envolvendo redes complexas, fenômenos críticos, sistemas desordenados, ciência das cidades, epidemiologia e inteligência artificial aplicada à saúde.",
+
+      areas: [
+        "Física Estatística",
+        "Física Computacional",
+        "Sistemas Complexos",
+        "Redes Complexas",
+        "Inteligência Artificial"
+      ]
+    }
+  },
+
   cronograma: {
     showSchedule: true,
     dias: ["2026-10-06","2026-10-07","2026-10-08","2026-10-09"],
@@ -111,8 +131,9 @@ const SITE_CONFIG = {
       categoria: "Palestras",
       dia: "2026-10-06",
       horario: "17:00",
-      titulo: "Palestra de Abertura - Inovatcht: Daniza Silveira",
-      local: "",
+      titulo: "Palestra de Abertura",
+      palestrante: "joseSoares",
+      local: "Auditório Maestrina Clóris de Oliveira",
     },
     {
       categoria: "Palestras",
