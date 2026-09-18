@@ -286,10 +286,9 @@ if (
   /* ---------- Mostrar atividades ---------- */
 
 function renderCronograma() {
-
   const atividades = itens.filter((item) =>
     item.dia === diaSelecionado &&
-    item.categoria === categoriaSelecionada
+    (categoriaSelecionada === "Programação Geral" || item.categoria === categoriaSelecionada)
   );
 
   if (atividades.length === 0) {
