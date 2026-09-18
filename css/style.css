@@ -1938,9 +1938,9 @@ button:focus-visible {
   }
 
   .cronograma__categorias {
-    flex-direction: column;
-
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
   }
 
   .cronograma__tab {
