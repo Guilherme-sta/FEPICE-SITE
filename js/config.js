@@ -81,7 +81,7 @@ const SITE_CONFIG = {
       foto: "assets/img/jose-soares-perfil.gif",
 
       resumo:
-        "Professor Titular do Departamento de Física da UFC, bolsista de produtividade em pesquisa do CNPq nível 1A e membro da Academia Brasileira de Ciências. Atua nas áreas de Física Estatística, Física Computacional e Sistemas Complexos, com pesquisas envolvendo redes complexas, fenômenos críticos, sistemas desordenados, ciência das cidades, epidemiologia e inteligência artificial aplicada à saúde.",
+        "José Soares de Andrade Júnior é Professor Titular do Departamento de Física da Universidade Federal do Ceará (UFC), bolsista de produtividade em pesquisa do CNPq nível 1A e membro da Academia Brasileira de Ciências. Possui graduação em Engenharia Química pela Universidade Federal de Pernambuco e mestrado e doutorado pela COPPE/UFRJ. Foi Pró-Reitor de Relações Internacionais da UFC entre 2017 e 2019 e atuou como pesquisador visitante na Boston University e professor visitante no ETH Zurique. Ao longo de sua carreira, publicou mais de 270 artigos científicos em periódicos internacionais, incluindo trabalhos na Nature, Nature Physics, Nature Communications, PNAS, Physical Review X e Physical Review Letters. É membro do Colegiado da Pós-Graduação em Física da UFC e atua desde 2023 como Pesquisador Responsável pelo Centro de Referência em Inteligência Artificial (CEREIA), parceria entre a UFC e o grupo Hapvida, voltada ao desenvolvimento de pesquisas em inteligência artificial aplicada à saúde.",
 
       areas: [
         "Física Estatística",
