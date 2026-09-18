@@ -96,39 +96,39 @@ const SITE_CONFIG = {
   cronograma: {
     showSchedule: true,
     dias: ["2026-10-06","2026-10-07","2026-10-08","2026-10-09"],
-    categorias: ["Palestras", "Minicursos", "Apresentação de Trabalhos", "Programação Geral"],
+    categorias: ["Programação Geral", "Palestras", "Minicursos", "Apresentação de Trabalhos"],
     itens: [
       // 06/10/2026
     {
-      categoria: "Programação Geral",
+      categoria: "Palestras",
       dia: "2026-10-06",
       horario: "14:00",
       titulo: "Credenciamento",
       local: "",
     },
     {
-      categoria: "Programação Geral",
+      categoria: "Palestras",
       dia: "2026-10-06",
       horario: "15:00",
       titulo: "Credenciamento",
       local: "",
     },
     {
-      categoria: "Programação Geral",
+      categoria: "Palestras",
       dia: "2026-10-06",
       horario: "15:30",
       titulo: "Apresentação Cultural",
       local: "",
     },
     {
-      categoria: "Programação Geral",
+      categoria: "Palestras",
       dia: "2026-10-06",
       horario: "16:00",
       titulo: "Abertura",
       local: "",
     },
     {
-      categoria: "Programação Geral",
+      categoria: "Palestras",
       dia: "2026-10-06",
       horario: "17:00",
       titulo: "Resultado Fase 1 Idealab",
@@ -224,7 +224,7 @@ const SITE_CONFIG = {
 
     // 08/10/2026
     {
-      categoria: "Minicursos",
+      categoria: "Palestras",
       dia: "2026-10-08",
       horario: "08:30",
       titulo: "Refinar proposta Invest Piauí Idealab",
@@ -238,7 +238,7 @@ const SITE_CONFIG = {
       local: "",
     },
     {
-      categoria: "Minicursos",
+      categoria: "Palestras",
       dia: "2026-10-08",
       horario: "09:30",
       titulo: "Refinar proposta Invest Piauí Idealab",
@@ -294,14 +294,14 @@ const SITE_CONFIG = {
       local: "",
     },
     {
-      categoria: "Programação Geral",
+      categoria: "Palestras",
       dia: "2026-10-08",
       horario: "16:00",
       titulo: "LIMS e LABIRAS",
       local: "",
     },
     {
-      categoria: "Programação Geral",
+      categoria: "Palestras",
       dia: "2026-10-08",
       horario: "17:00",
       titulo: "GRUNA",
@@ -359,21 +359,21 @@ const SITE_CONFIG = {
       local: "",
     },
     {
-      categoria: "Programação Geral",
+      categoria: "Palestras",
       dia: "2026-10-09",
       horario: "16:00",
       titulo: "Premiação FEPICE",
       local: "",
     },
     {
-      categoria: "Programação Geral",
+      categoria: "Palestras",
       dia: "2026-10-09",
       horario: "17:00",
       titulo: "Resultado Fase 2 e premiação Idealab",
       local: "",
     },
     {
-      categoria: "Programação Geral",
+      categoria: "Palestras",
       dia: "2026-10-09",
       horario: "18:00",
       titulo: "Encerramento",
