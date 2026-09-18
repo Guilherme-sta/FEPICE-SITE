@@ -96,6 +96,13 @@ const SITE_CONFIG = {
     {
       categoria: "Palestras",
       dia: "2026-10-06",
+      horario: "15:30",
+      titulo: "Apresentação Cultural",
+      local: "",
+    },
+    {
+      categoria: "Palestras",
+      dia: "2026-10-06",
       horario: "16:00",
       titulo: "Abertura",
       local: "",
