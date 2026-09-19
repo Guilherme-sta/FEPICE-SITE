@@ -1673,6 +1673,11 @@ button:focus-visible {
     max-height: 75px;
     max-width: 92%;
   }
+
+  .cronograma__tab {
+    font-size: 0.78rem;
+    padding: 0.5rem 0.85rem;
+  }
 }
 
 
@@ -1941,6 +1946,10 @@ button:focus-visible {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.5rem;
+  }
+
+  .cronograma__categorias .cronograma__tab:last-child {
+    grid-column: 1 / -1;
   }
 
   .cronograma__tab {
