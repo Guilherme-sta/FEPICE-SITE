@@ -418,7 +418,8 @@ const SITE_CONFIG = {
       {nome: "NEPI", logo: "assets/logo/logo-nepi.png"},
       {nome: "NIT", logo: "assets/logo/logo-nit.png"},
       {nome: "FAIFPI", logo: "assets/logo/logo-faifpi.png"},
-      {nome: "InvestePiaui", logo: "assets/logo/logo-investepiaui.png"},
+      {nome: "PIT", logo: "assets/logo/logo-pit.png"},
+      {nome: "STARTUP", logo: "assets/logo/logo-startup.svg"},
       {nome: "FAPEPI", logo: "assets/logo/logo-fapepi.png"},
       {nome: "SEBRAE", logo: "assets/logo/logo-sebrae.png"},
       // { nome: "", logo: "" }  ← preencher e adicionar a imagem em assets/logo/
