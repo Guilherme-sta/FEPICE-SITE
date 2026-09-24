@@ -1215,8 +1215,8 @@ button:focus-visible {
 }
 
 .realizacao__logo:nth-child(3) .logo-img--realizacao {
-  height: 100px;
-  max-height: 100px;
+  height: 130px;
+  max-height: 130px;
   width: auto;
   max-width: 100%;
 }
