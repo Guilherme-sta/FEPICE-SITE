@@ -1222,6 +1222,55 @@ button:focus-visible {
 }
 
 /* -----------------------------------------------------
+   PARCEIROS
+   ----------------------------------------------------- */
+
+.parceiros {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.parceiros__rotulo {
+  margin: 0 0 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--cor-texto-suave);
+}
+
+.parceiros__grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.logo-img--parceiro,
+.parceiros__grid .logo-placeholder {
+  display: block;
+  width: auto;
+  height: 160px;
+  max-width: 320px;
+  max-height: 160px;
+  object-fit: contain;
+}
+
+.parceiros__grid .logo-placeholder {
+  height: 130px;
+  padding: 0 1.25rem;
+}
+
+.parceiros__grid .logo-placeholder span {
+  font-size: 1.1rem;
+}
+
+/* -----------------------------------------------------
    DEMAIS APOIADORES
    3 EM CIMA + 4 EMBAIXO
    ----------------------------------------------------- */
@@ -1406,6 +1455,13 @@ button:focus-visible {
     height: 180px; /* IdeiaLab */
   }
 
+  .logo-img--parceiro,
+  .parceiros__grid .logo-placeholder {
+    height: 180px;
+    max-height: 180px;
+    max-width: 360px;
+  }
+
   .apoiadores-demais__grid {
     max-width: 1050px;
     column-gap: 2.5rem;
@@ -1545,6 +1601,17 @@ button:focus-visible {
     grid-column: 1 / 2;
   }
 
+  .parceiros__grid {
+    gap: 2rem;
+  }
+
+  .logo-img--parceiro,
+  .parceiros__grid .logo-placeholder {
+    height: 140px;
+    max-height: 140px;
+    max-width: 280px;
+  }
+
   /*
      Apoiadores continuam 3 x 2
   */
@@ -1660,9 +1727,21 @@ button:focus-visible {
     height: 105px; /* IdeiaLab */
   }
 
+  .parceiros__grid {
+    gap: 1.5rem;
+  }
+
+  .logo-img--parceiro,
+  .parceiros__grid .logo-placeholder {
+    height: 120px;
+    max-height: 120px;
+    max-width: 240px;
+  }
+
   /*
      Apoiadores continuam 3 x 2
   */
+
   .apoiadores-demais__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
@@ -1765,6 +1844,13 @@ button:focus-visible {
 
   .hero__data {
     font-size: 1.05rem;
+  }
+
+  .logo-img--parceiro,
+  .parceiros__grid .logo-placeholder {
+    height: 100px;
+    max-height: 100px;
+    max-width: 200px;
   }
 
   /*
@@ -1893,6 +1979,17 @@ button:focus-visible {
 
   .hero__logos > *:nth-child(3) img {
     height: 65px; /* IdeiaLab */
+  }
+
+  .parceiros__grid {
+    gap: 1.25rem;
+  }
+
+  .logo-img--parceiro,
+  .parceiros__grid .logo-placeholder {
+    height: 85px;
+    max-height: 85px;
+    max-width: 170px;
   }
 
   /*
@@ -2041,6 +2138,13 @@ button:focus-visible {
     height: 55px; /* IdeiaLab */
   }
 
+  .logo-img--parceiro,
+  .parceiros__grid .logo-placeholder {
+    height: 70px;
+    max-height: 70px;
+    max-width: 145px;
+  }
+
   .logo-img--apoiador,
   .apoiadores-demais__grid .logo-placeholder {
     height: 45px;
@@ -2051,8 +2155,6 @@ button:focus-visible {
   .apoiador-destaque .logo-img--lims {
     height: 125px;
   }
-
-  @media (max-width: 360px) {
 
   .realizacao__grid {
     gap: 0.25rem;
@@ -2066,7 +2168,6 @@ button:focus-visible {
     max-height: 50px;
     max-width: 100%;
   }
-}
 }
 
 
