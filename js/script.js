@@ -555,6 +555,25 @@ function renderCronograma() {
     }
   }
 
+  const parceirosArea = document.getElementById("apoiadores-parceiros");
+
+  if (parceirosArea) {
+    const parceiros = SITE_CONFIG.apoiadores.parceiros || [];
+
+    if (parceiros.length === 0) {
+      parceirosArea.hidden = true;
+    } else {
+      parceirosArea.hidden = false;
+
+      parceirosArea.innerHTML = `
+        <p class="parceiros__rotulo">Parceiros</p>
+        <div class="parceiros__grid">
+          ${parceiros.map((p) => logoOuPlaceholder(p.nome, p.logo, "logo-img--parceiro")).join("")}
+        </div>
+      `;
+    }
+  }
+
   const demaisArea = document.getElementById("apoiadores-demais");
   if (demaisArea) {
     const demais = SITE_CONFIG.apoiadores.demais || [];

@@ -371,6 +371,11 @@ const SITE_CONFIG = {
       }
     ],
 
+    parceiros: [
+      { nome: "Nome do Parceiro", logo: "assets/logo/logo-digital.png" }
+      // { nome: "", logo: "" }  ← adicione mais aqui quando surgirem
+    ],
+
     demais: [
       {nome: "INOVAIFPI", logo: "assets/logo/logo-inovaifpi.png"},
       {nome: "NEPI", logo: "assets/logo/logo-nepi.png"},
