@@ -163,7 +163,7 @@ const SITE_CONFIG = {
       dia: "2026-10-07",
       horario: "14:00 às 14:30",
       titulo: "Palestra iniciativas Sebrae",
-      local: "Laboratório EmbarcaTech (Sala A1-07)",
+      local: "Auditório Maestrina Clóris de Oliveira",
     },
     {
       categoria: "Apresentação de Trabalhos",
@@ -177,7 +177,7 @@ const SITE_CONFIG = {
       dia: "2026-10-07",
       horario: "14:30 às 15:00",
       titulo: "Palestra iniciativas Invest Piauí",
-      local: "Laboratório EmbarcaTech (Sala A1-07)",
+      local: "Auditório Maestrina Clóris de Oliveira",
     },
     {
       categoria: "Palestras",
@@ -203,9 +203,9 @@ const SITE_CONFIG = {
     {
       categoria: "",
       dia: "2026-10-07",
-      horario: "16:00 às 17:30",
+      horario: "16:00 às 18:00",
       titulo: "Refinar proposta Invest Piauí IdeiaLab",
-      local: "LIMS",
+      local: "Laboratório EmbarcaTech (Sala A1-07)",
     },
 
     // 08/10/2026
@@ -219,7 +219,7 @@ const SITE_CONFIG = {
     {
       categoria: "Apresentação de Trabalhos",
       dia: "2026-10-08",
-      horario: "10:30 às 11:30",
+      horario: "08:30 às 11:30",
       titulo: "Apresentação FEPICE",
       local: "Térreo Prédio B",
     },
@@ -227,8 +227,8 @@ const SITE_CONFIG = {
       categoria: "Minicursos",
       dia: "2026-10-08",
       horario: "14:00 às 18:00",
-      titulo: "Apresentação de Bioinformática",
-      local: "a definir",
+      titulo: "Minicurso de Bioinformática",
+      local: "Laboratório B3-10",
     },
     {
       categoria: "Palestras",
@@ -247,22 +247,15 @@ const SITE_CONFIG = {
     {
       categoria: "Apresentação de Trabalhos",
       dia: "2026-10-08",
-      horario: "14:30 às 15:30",
+      horario: "14:30 às 17:30",
       titulo: "Apresentação FEPICE",
-      local: "LIMS",
+      local: "Térreo Prédio B",
     },
     {
       categoria: "Palestras",
       dia: "2026-10-08",
-      horario: "15:00 às 15:30",
+      horario: "15:00 às 16:00",
       titulo: "Palestra Dr Ney Paranaguá",
-      local: "Auditório Maestrina Clóris de Oliveira",
-    },
-    {
-      categoria: "Apresentação de Trabalhos",
-      dia: "2026-10-08",
-      horario: "15:30 às 16:00",
-      titulo: "Apresentação FEPICE",
       local: "Auditório Maestrina Clóris de Oliveira",
     },
     {
@@ -278,13 +271,6 @@ const SITE_CONFIG = {
       horario: "16:30 às 17:00",
       titulo: "Palestra Labiras",
       local: "Auditório Maestrina Clóris de Oliveira",
-    },
-    {
-      categoria: "Apresentação de Trabalhos",
-      dia: "2026-10-08",
-      horario: "16:30 às 18:00",
-      titulo: "Apresentação FEPICE",
-      local: "Térreo Prédio B",
     },
     {
       categoria: "Palestras",
@@ -312,14 +298,14 @@ const SITE_CONFIG = {
     {
       categoria: "Apresentação de Trabalhos",
       dia: "2026-10-09",
-      horario: "09:00 às 10:30",
+      horario: "09:00 às 11:00",
       titulo: "Apresentação dos PITs IdeaLab",
       local: "DPI",
     },
     {
       categoria: "Palestras",
       dia: "2026-10-09",
-      horario: "10:00 às 11:00",
+      horario: "14:00 às 15:00",
       titulo: "Palestra TI",
       local: "a definir",
     },
