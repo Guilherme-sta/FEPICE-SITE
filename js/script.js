@@ -159,6 +159,17 @@ document.addEventListener("DOMContentLoaded", () => {
   instituicao.textContent = palestrante.instituicao;
   resumo.textContent = palestrante.resumo;
 
+  const palestraBox = modal.querySelector(".palestrante-modal__palestra-container");
+  const palestraTxt = modal.querySelector(".palestrante-modal__resumo-palestra");
+
+  if (palestrante.resumoPalestra) {
+    palestraTxt.textContent = palestrante.resumoPalestra;
+    palestraBox.hidden = false;
+  } else {
+    palestraTxt.textContent = "";
+    palestraBox.hidden = true;
+  }
+
   if (palestrante.foto) {
     foto.src = palestrante.foto;
     foto.alt = palestrante.nome;
@@ -345,9 +356,8 @@ function renderCronograma() {
                       class="cronograma__palestrante"
                       data-palestrante="${item.palestrante}"
                     >
-                      Palestrante:
+                      ${palestrante.papel || "Palestrante"}:
                       <strong>${palestrante.nome}</strong>
-                    </button>
                   `
                   : ""
               }
@@ -356,6 +366,8 @@ function renderCronograma() {
                 Local:
                 ${item.local || "A definir"}
               </p>
+
+              ${item.observacao ? `<p class="cronograma__observacao">${item.observacao}</p>` : ""}
 
             </div>
 

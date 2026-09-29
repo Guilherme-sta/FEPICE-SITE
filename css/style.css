@@ -1098,6 +1098,36 @@ button:focus-visible {
   background: #f1f1f1;
 }
 
+.palestrante-modal__palestra-container {
+  margin-bottom: 24px;
+  padding: 16px 18px;
+  background: #f1f3f8;
+  border-radius: 10px;
+}
+
+.palestrante-modal__palestra-container h3,
+.palestrante-modal__titulo-curriculo {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+}
+
+.palestrante-modal__resumo-palestra {
+  margin: 0;
+  line-height: 1.7;
+  color: #333;
+}
+
+.cronograma__observacao {
+  margin: 0.5rem 0 0;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cor-azul-escuro);
+  background: #FFF6CC;
+  border-left: 3px solid var(--cor-dourado);
+  border-radius: 6px;
+}
+
 /* =====================================================
    APOIADORES E REALIZAÇÃO
    ===================================================== */
