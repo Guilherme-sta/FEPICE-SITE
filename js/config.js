@@ -90,6 +90,30 @@ const SITE_CONFIG = {
         "Redes Complexas",
         "Inteligência Artificial"
       ]
+    },
+
+    carlosHenrique: {
+      papel: "Ministrante",
+      nome: "Carlos Henrique",           
+      cargo: "Estudante de ADS e estagiário no TCE-PI",
+      instituicao: "Instituto Federal do Piauí (IFPI)", 
+      foto: "assets/img/carlos-henrique-perfil.gif",                           
+      resumo:
+        "Estudante de Análise e Desenvolvimento de Sistemas (ADS) e estagiário no TCE-PI. Já atuou na indústria de jogos como compositor e sound designer no Submersivo Game Studio, estúdio piauiense, sendo responsável pelo áudio do jogo \"The Last NightMary: A lenda do cabeça de cuia\".",
+      areas: ["Composição musical", "Sound design", "Áudio para jogos", "Música 8 e 16 bits"]
+    },
+
+    bianca: {
+      papel: "Palestrante",
+      nome: "Bianca",                      
+      cargo: "Gerente de TI na Superintendência de Cidadania Digital \"Félix Pacheco\" (SSP-PI)",
+      instituicao: "Instituto Federal do Piauí (IFPI) · Residente Inovatech/IFPI",
+      foto: "assets/img/bianca-perfil.jpeg",
+      resumoPalestra:
+        "Os modelos de linguagem de grande escala (LLMs), como os que estão por trás do ChatGPT, sabem um pouco de tudo, mas costumam errar quando lidam com o conhecimento de uma área específica, podendo inventar informações ou responder de forma diferente da esperada. Esta palestra apresenta como esses modelos podem ser adaptados para aplicações em áreas como educação, saúde e serviços públicos, por meio de estratégias de especialização. Serão abordados a engenharia de prompt, o RAG (Geração Aumentada por Recuperação) e o fine-tuning supervisionado (SFT), além dos critérios para escolher a abordagem mais adequada a cada caso. Por fim, a palestra discute os vieses que podem surgir em modelos especializados e formas de mitigá-los.",
+      resumo:
+        "Tecnóloga em Análise e Desenvolvimento de Sistemas pelo Instituto Federal do Piauí (IFPI). Gerente de Tecnologia da Informação na Superintendência de Cidadania Digital \"Félix Pacheco\" (SSP-PI), com experiência em desenvolvimento de soluções governamentais e gestão de sistemas de identificação civil. Residente em desenvolvimento de sistemas pelo programa Inovatech/IFPI.",
+      areas: ["Inteligência Artificial", "LLMs", "Engenharia de Prompt", "RAG", "Desenvolvimento de Sistemas"]
     }
   },
 
@@ -141,7 +165,7 @@ const SITE_CONFIG = {
       categoria: "Minicursos",
       dia: "2026-10-07",
       horario: "08:00 às 12:00",
-      titulo: "Minicurso: Robótica Básica",
+      titulo: "Robótica Básica com Arduino",
       local: "Laboratório EmbarcaTech (Sala A1-07)",
     },
     {
@@ -155,7 +179,9 @@ const SITE_CONFIG = {
       categoria: "Minicursos",
       dia: "2026-10-07",
       horario: "14:00 às 18:00",
-      titulo: "Minicurso Carlos Henrique",
+      titulo: "Criação de músicas e efeitos sonoros para jogos 8 e 16 Bits",
+      palestrante: "carlosHenrique",
+      observacao: "🎧 Leve seu fone de ouvido para produzir os materiais durante o minicurso.",
       local: "Auditório Carmen Sinott",
     },
     {
@@ -190,7 +216,8 @@ const SITE_CONFIG = {
       categoria: "Palestras",
       dia: "2026-10-07",
       horario: "16:00 às 17:00",
-      titulo: "Palestra Bianca",
+      titulo: "Estratégias de especialização de domínio em LLMs",
+      palestrante: "bianca",
       local: "Auditório Maestrina Clóris de Oliveira",
     },
     {
