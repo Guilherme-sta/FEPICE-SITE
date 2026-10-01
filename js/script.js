@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
           ${
             ev.inscricao.disponivel && ev.inscricao.url
               ? `<a class="btn btn--primary" href="${ev.inscricao.url}" target="_blank" rel="noopener">Inscrever-se</a>`
-              : `<span class="card__status">Inscrições em breve</span>`
+              : `<span class="btn btn--secondary btn--disabled">Inscrições encerradas</span>`
           }
 
           ${
