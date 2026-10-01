@@ -33,7 +33,7 @@ const SITE_CONFIG = {
       sobreDisponivel: true,
       sobreTexto: "A <b>II Feira Piauiense de Ciências e Engenharia – FEPICE</b> será realizada no Campus Teresina Central do Instituto Federal do Piauí (IFPI), em Teresina/PI. É um evento gratuito e de abrangência estadual, destinado a estudantes do 8º e 9º anos do Ensino Fundamental, do Ensino Médio e do Ensino Técnico. As inscrições, gratuitas, ocorrem de 15 a 25 de setembro de 2026, sendo destinadas a equipes formadas por discentes regularmente matriculados e seus servidores orientadores.",
       inscricao: {
-        disponivel: true,
+        disponivel: false,
         url: "https://forms.gle/S7zV8ow6jTha5kDH8"
       },
       edital: {
@@ -59,7 +59,7 @@ const SITE_CONFIG = {
       sobreDisponivel: true,
       sobreTexto: "A <b>Competição de Ideias – IdeiaLab 2026</b> será realizada pelo Campus Teresina Central do Instituto Federal do Piauí (IFPI), por meio da <b>Diretoria de Pesquisa, Pós-Graduação e Inovação (DPI)</b>, em parceria com o <b>Sebrae Piauí</b>, a <b>Invest Piauí</b>, o <b>InovaIFPI</b>, o <b>Núcleo de Empreendedorismo e Inovação (NEPI)</b>, o <b>Núcleo de Inovação Tecnológica (NIT)</b>, a <b>FAPEPI</b> e a <b>FAIFPI</b>. O evento tem como objetivo estimular a criatividade, a inovação e o empreendedorismo entre os estudantes, promovendo soluções para desafios reais do campus. As inscrições, gratuitas, ocorrem de 07 a 30 de setembro de 2026, sendo destinadas a equipes formadas por discentes regularmente matriculados e um servidor orientador. <b>Premiação:</b> bolsas de <b>R$500,00</b> por 06 meses para cada aluno(a) das equipes selecionadas",
       inscricao: {
-        disponivel: true,
+        disponivel: false,
         url: "https://forms.gle/dLEgLeR58XUi2jW7A"
       },
       edital: {
