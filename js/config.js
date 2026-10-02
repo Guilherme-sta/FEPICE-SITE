@@ -40,6 +40,10 @@ const SITE_CONFIG = {
         disponivel: true,
         url: "https://drive.google.com/file/d/1gsSGV57Fcv87aNP16lklusnrkSeiKCeb/view?usp=sharing"
       },
+      projetosSelecionados: {
+        disponivel: true,
+        url: "https://drive.google.com/file/d/1UyY9V9x3ifnLm9BC-AkuhKT09xiViOvm/view?usp=sharing"
+      }
     },
     teresinaInfo: {
       nome: "Teresina Info 2026",
@@ -69,6 +73,10 @@ const SITE_CONFIG = {
       palestraSebrae: {
         disponivel: true,
         url: "https://youtu.be/cB2znzeCyrI",
+      },
+      equipesHomologadas: {
+        disponivel: true,
+        url: "https://drive.google.com/file/d/14iBUWcVhZ4e6W2lXIY8o2U8OMKrHtccL/view?usp=sharing"
       }
     }
   },
