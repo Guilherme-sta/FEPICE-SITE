@@ -113,14 +113,26 @@ document.addEventListener("DOMContentLoaded", () => {
           }
 
           ${
-            ev.palestraSebrae &&
-            ev.palestraSebrae.disponivel &&
-            ev.palestraSebrae.url
-              ? `<a class="btn btn--primary" href="${ev.palestraSebrae.url}" target="_blank" rel="noopener">Palestra Sebrae</a>`
+            ev.palestraSebrae && ev.palestraSebrae.disponivel && ev.palestraSebrae.url
+            ? `<a class="btn btn--primary" href="${ev.palestraSebrae.url}" target="_blank" rel="noopener">Palestra Sebrae</a>`
+            : ""
+          }
+
+          ${
+            chave === "ideiaLab" &&
+            ev.equipesHomologadas && ev.equipesHomologadas.disponivel && ev.equipesHomologadas.url
+              ? `<a class="btn btn--secondary" href="${ev.equipesHomologadas.url}" target="_blank" rel="noopener noreferrer" aria-label="Consultar equipes homologadas">Equipes homologadas</a>`
               : ""
           }
-        </div>
-      `;
+
+          ${
+            chave === "fepice" &&
+            ev.projetosSelecionados && ev.projetosSelecionados.disponivel && ev.projetosSelecionados.url
+              ? `<a class="btn btn--primary" href="${ev.projetosSelecionados.url}" target="_blank" rel="noopener noreferrer" aria-label="Consultar projetos selecionados">Projetos Selecionados</a>`
+              : ""
+          }
+      </div>
+    `;
 
       return `
         <article class="card card--evento" id="evento-inscricao-${chave}">
@@ -358,6 +370,7 @@ function renderCronograma() {
                     >
                       ${palestrante.papel || "Palestrante"}:
                       <strong>${palestrante.nome}</strong>
+                    </button>
                   `
                   : ""
               }
