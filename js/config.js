@@ -100,6 +100,17 @@ const SITE_CONFIG = {
       ]
     },
 
+    neyParanagua: {
+      papel: "Palestrante",
+      nome: "Ney Paranaguá",
+      cargo: "Fundador e Presidente da MAIDA HEALTH PARTICIPAÇÕES SOCIETÁRIAS S.A.",
+      instituicao: "Professor aposentado do Instituto Federal do Piauí (IFPI)",
+      foto: "assets/img/ney-paranagua-perfil.gif", // adicionar quando houver: "assets/img/ney-paranagua-perfil.jpg"
+      resumo:
+        "Profissional com ampla experiência em Ciência da Computação, graduado em Bacharelado pela UFMG (1988), mestre pela UFPE (2003) e doutor pela UFF (2016). É fundador e presidente da MAIDA HEALTH PARTICIPAÇÕES SOCIETÁRIAS S.A., sócio titular da NPC Consultoria Empresarial LTDA e fundador da Maida Infoway Tecnologia e Gestão em Saúde LTDA e do plano de saúde Uniplam. Professor aposentado do IFPI, atuou como Membro Externo Especialista do Comitê de Inovação e Transformação Digital do Hapvida de 2019 a 2022.",
+      areas: ["Data Envelopment Analysis", "Health Care", "Programação Matemática", "Sistema Biométrico Web", "TV Digital"]
+    },
+
     carlosHenrique: {
       papel: "Ministrante",
       nome: "Carlos Henrique",           
@@ -122,6 +133,54 @@ const SITE_CONFIG = {
       resumo:
         "Tecnóloga em Análise e Desenvolvimento de Sistemas pelo Instituto Federal do Piauí (IFPI). Gerente de Tecnologia da Informação na Superintendência de Cidadania Digital \"Félix Pacheco\" (SSP-PI), com experiência em desenvolvimento de soluções governamentais e gestão de sistemas de identificação civil. Residente em desenvolvimento de sistemas pelo programa Inovatech/IFPI.",
       areas: ["Inteligência Artificial", "LLMs", "Engenharia de Prompt", "RAG", "Desenvolvimento de Sistemas"]
+    },
+
+    ricardoLira: {
+      papel: "Palestrante",
+      nome: "Ricardo de Andrade Lira Rabêlo",
+      cargo: "Professor Associado do Departamento de Computação (CCN)",
+      instituicao: "Universidade Federal do Piauí (UFPI)",
+      foto: "assets/img/ricardo-lira-perfil.gif",
+      resumo:
+        "Graduado em Bacharelado em Ciência da Computação pela UFPI (2005) e doutor em Ciências pelo Programa de Engenharia Elétrica da USP (2010). É professor permanente dos programas de pós-graduação em Ciência da Computação (PPGCC e DCCMAPI) e em Engenharia Elétrica (PPGEE), pesquisador do PIBIC/CNPq/UFPI e do PIBITI/UFPI e professor extensionista em projetos de difusão tecnológica envolvendo computação aplicada e sistemas computacionais. Empreendedor do agronegócio e da tecnologia, é fundador e sócio da IAgro Soluções em Tecnologia LTDA e da Agro DCorthe Alimentos LTDA, e sócio-cotista da Rabelo e Andrade LTDA (DuPorco Agronegócio).",
+      areas: ["Sistemas Inteligentes", "Redes Neurais Artificiais", "Sistemas Fuzzy", "Computação Evolutiva", "Internet das Coisas", "Pesquisa Operacional", "Zootecnia de Precisão"]
+    },
+
+    thabataCronemberger: {
+      papel: "Palestrante",
+      nome: "Thábata Cronemberger",
+      cargo: "Gestora da Educação Empreendedora",
+      instituicao: "Sebrae Piauí",
+      foto: "",
+      resumoPalestra: "", // o bloco de notas não traz resumo da palestra
+      resumo:
+        "Especialista em Consultoria Organizacional, Gestão Financeira e Gestão Empresarial Integrada. Atua como gestora da Educação Empreendedora do Sebrae Piauí.",
+      areas: ["Consultoria Organizacional", "Gestão Financeira", "Gestão Empresarial Integrada"]
+    },
+
+    vicenteOliveira: {
+      papel: "Palestrante",
+      nome: "Vicente Oliveira",
+      cargo: "Consultor e mentor de inovação",
+      instituicao: "",
+      foto: "",
+      resumoPalestra:
+        "Chegou a hora de transformar a sua ideia em uma apresentação capaz de despertar o interesse e conquistar a Comissão Julgadora do IdeiaLab 2026. Nesta palestra, as equipes serão conduzidas por uma jornada prática para estruturar um pitch claro, objetivo e convincente, trabalhando o problema, a solução e proposta de valor, o mercado e público-alvo, a concorrência e os diferenciais, o modelo de negócio, a relevância para o Campus, a viabilidade técnica e operacional, a sustentabilidade financeira, o impacto social e institucional e sua relação com os ODS, e a chamada para a ação. Mais do que aprender a montar slides, a proposta é ajudar cada equipe a construir uma narrativa capaz de apresentar o problema, demonstrar o valor da solução e evidenciar seu potencial de implementação, aspectos diretamente relacionados à avaliação da Segunda Etapa do IdeiaLab.",
+      resumo:
+        "Consultor, mentor e entusiasta da inovação, atua no desenvolvimento de negócios inovadores, startups e iniciativas de empreendedorismo. Trabalha com planejamento estratégico, modelagem e estruturação de negócios, planos de negócios, gestão financeira, diagnóstico organizacional e captação de recursos, apoiando empreendedores e equipes na transformação de ideias em projetos estruturados e viáveis.",
+      areas: ["Planejamento Estratégico", "Modelagem de Negócios", "Startups", "Captação de Recursos"]
+    },
+
+    joaoPedro: {
+      papel: "Ministrante",
+      nome: "João Pedro",
+      cargo: "",
+      instituicao: "",
+      foto: "assets/img/joao-pedro-perfil.jpeg",
+      resumoPalestra:
+        "Neste minicurso serão apresentados os principais cuidados para aumentar a segurança e a privacidade no ambiente digital. Você irá aprender práticas como uso adequado de senhas, autenticação de dois fatores, realização de backups, controle de permissões, proteção em redes e identificação de vírus, golpes e técnicas de engenharia social.",
+      resumo: "",
+      areas: ["Segurança Digital", "Privacidade", "Engenharia Social"]
     }
   },
 
@@ -196,7 +255,8 @@ const SITE_CONFIG = {
       categoria: "Palestras",
       dia: "2026-10-07",
       horario: "14:00 às 14:30",
-      titulo: "Palestra iniciativas Sebrae",
+      titulo: "Sebrae + Supernova: Transformando Ideias em Oportunidades",
+      palestrante: "thabataCronemberger",
       local: "Auditório Maestrina Clóris de Oliveira",
     },
     {
@@ -232,8 +292,16 @@ const SITE_CONFIG = {
       categoria: "Palestras",
       dia: "2026-10-07",
       horario: "17:00 às 18:00",
-      titulo: "Palestra TI",
+      titulo: "Palestra Charleno Pires",
       local: "Auditório Maestrina Clóris de Oliveira",
+    },
+    {
+      categoria: "Minicursos",
+      dia: "2026-10-07",
+      horario: "17:00 às 18:00",
+      titulo: "Proteja Seus Dados: Guia Completo de Segurança Digital",
+      palestrante: "joaoPedro",
+      local: "Laboratório B3-10",
     },
     {
       categoria: "",
@@ -241,6 +309,13 @@ const SITE_CONFIG = {
       horario: "16:00 às 18:00",
       titulo: "Refinar proposta Invest Piauí IdeiaLab",
       local: "Laboratório EmbarcaTech (Sala A1-07)",
+    },
+     {
+      categoria: "Palestras",
+      dia: "2026-10-07",
+      horario: "18:00 às 19:00",
+      titulo: "Palestra Guilherme",
+      local: "Auditório Maestrina Clóris de Oliveira",
     },
 
     // 08/10/2026
@@ -276,7 +351,8 @@ const SITE_CONFIG = {
       categoria: "Palestras",
       dia: "2026-10-08",
       horario: "14:00 às 16:00",
-      titulo: "Roteirização do Pitch IdeiaLab",
+      titulo: "Pitch! Agora é com você — Roteirização do Pitch IdeiaLab",
+      palestrante: "vicenteOliveira",
       local: "Laboratório EmbarcaTech (Sala A1-07)",
     },
     {
@@ -290,7 +366,8 @@ const SITE_CONFIG = {
       categoria: "Palestras",
       dia: "2026-10-08",
       horario: "15:00 às 16:00",
-      titulo: "Palestra Dr Ney Paranaguá",
+      titulo: "A Nova Formação do Profissional de Computação",
+      palestrante: "neyParanagua",
       local: "Auditório Maestrina Clóris de Oliveira",
     },
     {
@@ -341,21 +418,15 @@ const SITE_CONFIG = {
       categoria: "Palestras",
       dia: "2026-10-09",
       horario: "14:00 às 15:00",
-      titulo: "Palestra TI",
-      local: "a definir",
-    },
-    {
-      categoria: "Palestras",
-      dia: "2026-10-09",
-      horario: "14:00 às 15:00",
-      titulo: "Palestra Ricardo Lira",
+      titulo: "Palestra Ricardo Lira", // trocar pelo título real quando souber
+      palestrante: "ricardoLira",
       local: "a definir",
     },
     {
       categoria: "Palestras",
       dia: "2026-10-09",
       horario: "15:00 às 16:00",
-      titulo: "Palestra DR Nazareno César",
+      titulo: "Palestra Nazareno César",
       local: "Auditório Maestrina Clóris de Oliveira",
     },
     {

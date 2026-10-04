@@ -166,10 +166,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const resumo = modal.querySelector(".palestrante-modal__resumo");
   const areas = modal.querySelector(".palestrante-modal__areas");
 
-  nome.textContent = palestrante.nome;
-  cargo.textContent = palestrante.cargo;
-  instituicao.textContent = palestrante.instituicao;
-  resumo.textContent = palestrante.resumo;
+  nome.textContent = palestrante.nome || "";
+  cargo.textContent = palestrante.cargo || "";
+  instituicao.textContent = palestrante.instituicao || "";
+  resumo.textContent = palestrante.resumo || "";
 
   const palestraBox = modal.querySelector(".palestrante-modal__palestra-container");
   const palestraTxt = modal.querySelector(".palestrante-modal__resumo-palestra");
