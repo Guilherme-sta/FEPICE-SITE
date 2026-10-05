@@ -135,23 +135,12 @@ const SITE_CONFIG = {
       areas: ["Inteligência Artificial", "LLMs", "Engenharia de Prompt", "RAG", "Desenvolvimento de Sistemas"]
     },
 
-    ricardoLira: {
-      papel: "Palestrante",
-      nome: "Ricardo de Andrade Lira Rabêlo",
-      cargo: "Professor Associado do Departamento de Computação (CCN)",
-      instituicao: "Universidade Federal do Piauí (UFPI)",
-      foto: "assets/img/ricardo-lira-perfil.gif",
-      resumo:
-        "Graduado em Bacharelado em Ciência da Computação pela UFPI (2005) e doutor em Ciências pelo Programa de Engenharia Elétrica da USP (2010). É professor permanente dos programas de pós-graduação em Ciência da Computação (PPGCC e DCCMAPI) e em Engenharia Elétrica (PPGEE), pesquisador do PIBIC/CNPq/UFPI e do PIBITI/UFPI e professor extensionista em projetos de difusão tecnológica envolvendo computação aplicada e sistemas computacionais. Empreendedor do agronegócio e da tecnologia, é fundador e sócio da IAgro Soluções em Tecnologia LTDA e da Agro DCorthe Alimentos LTDA, e sócio-cotista da Rabelo e Andrade LTDA (DuPorco Agronegócio).",
-      areas: ["Sistemas Inteligentes", "Redes Neurais Artificiais", "Sistemas Fuzzy", "Computação Evolutiva", "Internet das Coisas", "Pesquisa Operacional", "Zootecnia de Precisão"]
-    },
-
     thabataCronemberger: {
       papel: "Palestrante",
       nome: "Thábata Cronemberger",
       cargo: "Gestora da Educação Empreendedora",
       instituicao: "Sebrae Piauí",
-      foto: "",
+      foto: "assets/img/thabata-perfil.jpeg",
       resumoPalestra: "", // o bloco de notas não traz resumo da palestra
       resumo:
         "Especialista em Consultoria Organizacional, Gestão Financeira e Gestão Empresarial Integrada. Atua como gestora da Educação Empreendedora do Sebrae Piauí.",
@@ -163,7 +152,7 @@ const SITE_CONFIG = {
       nome: "Vicente Oliveira",
       cargo: "Consultor e mentor de inovação",
       instituicao: "",
-      foto: "",
+      foto: "assets/img/vicente-oliveira-perfil.jpeg",
       resumoPalestra:
         "Chegou a hora de transformar a sua ideia em uma apresentação capaz de despertar o interesse e conquistar a Comissão Julgadora do IdeiaLab 2026. Nesta palestra, as equipes serão conduzidas por uma jornada prática para estruturar um pitch claro, objetivo e convincente, trabalhando o problema, a solução e proposta de valor, o mercado e público-alvo, a concorrência e os diferenciais, o modelo de negócio, a relevância para o Campus, a viabilidade técnica e operacional, a sustentabilidade financeira, o impacto social e institucional e sua relação com os ODS, e a chamada para a ação. Mais do que aprender a montar slides, a proposta é ajudar cada equipe a construir uma narrativa capaz de apresentar o problema, demonstrar o valor da solução e evidenciar seu potencial de implementação, aspectos diretamente relacionados à avaliação da Segunda Etapa do IdeiaLab.",
       resumo:
@@ -181,7 +170,26 @@ const SITE_CONFIG = {
         "Neste minicurso serão apresentados os principais cuidados para aumentar a segurança e a privacidade no ambiente digital. Você irá aprender práticas como uso adequado de senhas, autenticação de dois fatores, realização de backups, controle de permissões, proteção em redes e identificação de vírus, golpes e técnicas de engenharia social.",
       resumo: "",
       areas: ["Segurança Digital", "Privacidade", "Engenharia Social"]
-    }
+    },
+
+    nazarenoCesar: {
+      papel: "Palestrante",
+      nome: "Nazareno César",
+      cargo: "Juiz Federal da Justiça Federal — Seção Judiciária do Estado do Piauí e Professor",
+      instituicao: "Justiça Federal — Seção Judiciária do Estado do Piauí · iCEV",
+      foto: "assets/img/nazareno-cesar-perfil.jpeg",
+      resumoPalestra:
+        "A palestra aborda considerações sobre ética no uso da Inteligência Artificial, discutindo os desafios éticos relacionados à utilização dessas tecnologias e sua aplicação responsável, especialmente diante de suas implicações para o Direito e para a sociedade.",
+      resumo:
+        "Graduado em Direito pela Universidade Federal do Piauí (UFPI), com especialização em Direito Tributário e Finanças Públicas pelo Instituto Brasileiro de Ensino, Desenvolvimento e Pesquisa (IDP) e Mestrado em Direito Constitucional pela mesma instituição. Atualmente é Juiz Federal da Justiça Federal — Seção Judiciária do Estado do Piauí e professor do Instituto de Ensino Superior (iCEV). Possui experiência nas áreas de Lógica Jurídica, Direito Constitucional, Direito Processual e Novas Tecnologias aplicadas ao Direito.",
+      areas: [
+        "Lógica Jurídica",
+        "Direito Constitucional",
+        "Direito Processual",
+        "Novas Tecnologias aplicadas ao Direito",
+        "Ética e Inteligência Artificial"
+      ]
+    },
   },
 
   cronograma: {
@@ -236,13 +244,6 @@ const SITE_CONFIG = {
       local: "Laboratório EmbarcaTech (Sala A1-07)",
     },
     {
-      categoria: "Apresentação de Trabalhos",
-      dia: "2026-10-07",
-      horario: "08:30 às 11:30",
-      titulo: "Apresentação FEPICE",
-      local: "Térreo Prédio B",
-    },
-    {
       categoria: "Minicursos",
       dia: "2026-10-07",
       horario: "14:00 às 18:00",
@@ -258,13 +259,6 @@ const SITE_CONFIG = {
       titulo: "Sebrae + Supernova: Transformando Ideias em Oportunidades",
       palestrante: "thabataCronemberger",
       local: "Auditório Maestrina Clóris de Oliveira",
-    },
-    {
-      categoria: "Apresentação de Trabalhos",
-      dia: "2026-10-07",
-      horario: "14:30 às 17:30",
-      titulo: "Apresentação FEPICE",
-      local: "Térreo Prédio B",
     },
     {
       categoria: "Palestras",
@@ -417,16 +411,9 @@ const SITE_CONFIG = {
     {
       categoria: "Palestras",
       dia: "2026-10-09",
-      horario: "14:00 às 15:00",
-      titulo: "Palestra Ricardo Lira", // trocar pelo título real quando souber
-      palestrante: "ricardoLira",
-      local: "a definir",
-    },
-    {
-      categoria: "Palestras",
-      dia: "2026-10-09",
       horario: "15:00 às 16:00",
-      titulo: "Palestra Nazareno César",
+      titulo: "Considerações sobre Ética no uso de IA",
+      palestrante: "nazarenoCesar",
       local: "Auditório Maestrina Clóris de Oliveira",
     },
     {
