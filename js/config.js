@@ -124,7 +124,7 @@ const SITE_CONFIG = {
 
     bianca: {
       papel: "Palestrante",
-      nome: "Bianca",                      
+      nome: "Bianca Almeida de Oliveira Bezerra",                      
       cargo: "Gerente de TI na Superintendência de Cidadania Digital \"Félix Pacheco\" (SSP-PI)",
       instituicao: "Instituto Federal do Piauí (IFPI) · Residente Inovatech/IFPI",
       foto: "assets/img/bianca-perfil.jpeg",
@@ -227,6 +227,126 @@ const SITE_CONFIG = {
       resumo:
         "Estudante do último período de Análise e Desenvolvimento de Sistemas (ADS) do IFPI – Campus Teresina Central. Atua no Observatório da Mulher Piauiense, da Secretaria das Mulheres de Estado, principalmente na área de análise de dados. Entre os painéis interativos em Power BI que desenvolveu estão a sistematização dos dados do Programa Nacional Pró-Equidade (edições 2024 e 2025), recortes demográficos do Piauí, os 10 anos da Lei do Feminicídio no estado e os organismos de políticas para as mulheres. Também desenvolveu o Mapa da Rede de Enfrentamento à Violência contra a Mulher, ferramenta web que reúne e localiza órgãos, instituições e serviços da rede de atendimento às mulheres em todo o Piauí.",
       areas: ["Análise de Dados", "Power BI", "Visualização de Dados", "Painéis Interativos", "Políticas para Mulheres"]
+    },
+
+    adelinoFrazao: {
+      papel: "Músico",
+      nome: "Adelino Frazão",
+      cargo: "Professor e Músico",
+      instituicao: "Instituto Federal do Piauí (IFPI)",
+      foto: "assets/img/adelino-perfil.gif",
+      resumo:
+        "Doutor em Música pela Universidade Federal de Minas Gerais (UFMG), com formação realizada entre 2019 e 2023. Mestre em Letras pela Universidade Estadual do Piauí (UESPI), com formação entre 2012 e 2014. Professor de Música do Instituto Federal do Piauí (IFPI) desde 2012. Coordenador Adjunto Estadual dos Agentes Territoriais de Cultura do Piauí. Especialista em Docência Superior pela UESPI (2011) e graduado em Educação Artística, com habilitação em Música, pela Universidade Federal do Piauí (UFPI), em 2004.",
+      areas: [
+        "Música",
+        "Educação Musical",
+        "Cultura",
+        "Letras"
+      ]
+    },
+
+    silvioPereira: {
+      papel: "Ministrante",
+      nome: "Silvio Pereira Silva Neto",
+      cargo: "Aluno do curso de Informática",
+      instituicao: "Instituto Federal do Piauí (IFPI)",
+      foto: "assets/img/isaac-perfil.jpeg",
+      resumo: "Aluno do curso de Informática do Instituto Federal do Piauí (IFPI).",
+      areas: ["Informática", "Robótica", "Arduino"]
+    },
+
+    vitorEmanuel: {
+      papel: "Ministrante",
+      nome: "Vítor Emanuel da Silva Rodrigues",
+      cargo: "Aluno do curso de Informática",
+      instituicao: "Instituto Federal do Piauí (IFPI)",
+      foto: "assets/img/vitor-perfil.jpeg",
+      resumo: "Aluno do curso de Informática do Instituto Federal do Piauí (IFPI).",
+      areas: ["Informática", "Robótica", "Arduino"]
+    },
+
+    isaacLima: {
+      papel: "Ministrante",
+      nome: "Isaac Lima de Oliveira",
+      cargo: "Aluno do curso de Informática",
+      instituicao: "Instituto Federal do Piauí (IFPI)",
+      foto: "assets/img/isaac-perfil.jpeg",
+      resumo: "Aluno do curso de Informática do Instituto Federal do Piauí (IFPI).",
+      areas: ["Informática", "Robótica", "Arduino"]
+    },
+
+    lucianaTsukada: {
+      papel: "Palestrante",
+      nome: "Luciana Tsukada",
+      cargo: "Gestora Executiva Startup Piauí",
+      instituicao: "Startup Piauí",
+      foto: "",
+      resumo: "",
+      areas: ["Empreendedorismo", "Startups", "Inovação"]
+    },
+
+    gregMaranhao: {
+      papel: "Palestrante",
+      nome: "Greg Maranhão",
+      cargo: "Chefe de Gabinete representando o Diretor Presidente do PIT - Rafael Jales",
+      instituicao: "PIT",
+      foto: "",
+      resumo: "",
+      areas: ["Inovação", "Empreendedorismo"]
+    },
+
+    simaoOliveira: {
+      papel: "Palestrante",
+      nome: "Simão Oliveira",
+      cargo: "Responsável pela Aceleração de Projetos",
+      instituicao: "PIT",
+      foto: "",
+      resumo: "",
+      areas: [
+        "Aceleração de Projetos",
+        "Startup Piauí",
+        "PIT"
+      ]
+    },
+
+    gusthavoEduardo: {
+      papel: "Ministrante",
+      nome: "Gusthavo Eduardo",
+      cargo: "Técnico em Informática e graduando em Ciência da Computação",
+      instituicao: "IFPI · Universidade Federal do Piauí (UFPI)",
+      foto: "assets/img/gusthavo-perfil.jpeg",
+      resumo:
+        "Técnico em Informática pelo Instituto Federal do Piauí (IFPI) e graduando em Ciência da Computação na Universidade Federal do Piauí (UFPI).",
+      areas: [
+        "Bioinformática",
+        "Alinhamento de sequências",
+        "Algoritmo de Smith-Waterman"
+      ]
+    },
+
+    marcus: {
+      papel: "Ministrante",
+      nome: "Marcus",
+      cargo: "Graduando em Ciência da Computação",
+      instituicao: "Universidade Federal do Piauí (UFPI)",
+      foto: "assets/img/marcus-perfil.jpeg",
+      resumo: "Graduando em Ciência da Computação na Universidade Federal do Piauí (UFPI).",
+      areas: [
+        "Bioinformática",
+        "Computação"
+      ]
+    },
+
+    luisFelipePatrocinio: {
+      papel: "Palestrante",
+      nome: "Luis Felipe Patrocínio",
+      cargo: "Programador de jogos, professor e cofundador de estúdio de games",
+      instituicao: "Instituto Federal do Piauí (IFPI) · Egresso de ADS",
+      foto: "assets/img/patrocinio-perfil.jpeg", // ex: "assets/img/luis-felipe-perfil.jpeg"
+      resumoPalestra: "A palestra apresenta um panorama realista e prático do mercado de desenvolvimento de jogos. O conteúdo aborda os games como motores de inovação na área da tecnologia, exigindo uma integração única entre disciplinas exatas e criativas, como programação, UX, música e game design. O público aprenderá os caminhos práticos para iniciar na área hoje, abordando a escolha de engines (GameMaker, Godot, Unity), a importância das Game Jams e a criação de portfólio. Por fim, faz uma análise crítica sobre a Inteligência Artificial no GameDev, discutindo as armadilhas de depender exclusivamente da IA para gerar projetos e a importância de manter a direção criativa humana como o núcleo de um jogo de sucesso.", // as notas não trazem título nem resumo da palestra
+      resumo:
+        "Programador de jogos, professor e cofundador de um estúdio de desenvolvimento de jogos no Piauí. Com uma trajetória não convencional, uniu a primeira formação em Ciências Contábeis à graduação em Análise e Desenvolvimento de Sistemas (IFPI) e transformou o hobby de gamedev em profissão. Foi pesquisador do LABIRAS e atua como programador de projetos comerciais de destaque lançados na Steam, como Tiny Witch, Asleep e There Will Be No Turkey This Christmas. Especialista em GameMaker e integração de Inteligência Artificial, também atua como professor de robótica, TI, IA e programação. Seu objetivo é desmistificar a área e preparar novos talentos para o mercado real de gamedev e de tecnologia em geral.",
+      areas: ["Desenvolvimento de Jogos", "GameMaker", "Inteligência Artificial", "Robótica", "Programação"]
     }
   },
 
@@ -247,7 +367,8 @@ const SITE_CONFIG = {
       categoria: "Palestras",
       dia: "2026-10-06",
       horario: "16:30 às 17:00",
-      titulo: "Apresentação Cultural",
+      titulo: "Apresentação Cultural do Professor e Músico Adelino Frazão",
+      palestrantes: ["adelinoFrazao"],
       local: "Auditório Maestrina Clóris de Oliveira",
     },
     {
@@ -268,8 +389,8 @@ const SITE_CONFIG = {
       categoria: "Palestras",
       dia: "2026-10-06",
       horario: "18:00 às 19:30",
-      titulo: "Palestra de Abertura",
-      palestrante: "joseSoares",
+      titulo: "Sistemas Complexos, Ciência de Dados e IA para Inovação Em Saúde",
+      palestrantes: ["joseSoares"],
       local: "Auditório Maestrina Clóris de Oliveira",
     },
 
@@ -279,6 +400,15 @@ const SITE_CONFIG = {
       dia: "2026-10-07",
       horario: "08:00 às 12:00",
       titulo: "Robótica Básica com Arduino",
+      palestrantes: [
+        "silvioPereira",
+        "vitorEmanuel",
+        "isaacLima"
+      ],
+      resumo:
+        "Minicurso de robótica com Arduino. Aprenda os conceitos básicos de robótica e lógica de programação de forma simples e objetiva. O conteúdo conta com exemplos práticos desenvolvidos diretamente no simulador Tinkercad.",
+      observacao:
+        "Traga seu notebook para fazer os exemplos práticos.",
       local: "Laboratório EmbarcaTech (Sala A1-07)",
     },
     {
@@ -286,7 +416,7 @@ const SITE_CONFIG = {
       dia: "2026-10-07",
       horario: "14:00 às 18:00",
       titulo: "Criação de músicas e efeitos sonoros para jogos 8 e 16 Bits",
-      palestrante: "carlosHenrique",
+      palestrantes: ["carlosHenrique"],
       observacao: "🎧 Leve seu fone de ouvido para produzir os materiais durante o minicurso.",
       local: "Auditório Carmen Sinott",
     },
@@ -295,21 +425,19 @@ const SITE_CONFIG = {
       dia: "2026-10-07",
       horario: "14:00 às 14:30",
       titulo: "Sebrae + Supernova: Transformando Ideias em Oportunidades",
-      palestrante: "thabataCronemberger",
+      palestrantes: ["thabataCronemberger"],
       local: "Auditório Maestrina Clóris de Oliveira",
     },
     {
       categoria: "Palestras",
       dia: "2026-10-07",
       horario: "14:30 às 15:00",
-      titulo: "Palestra iniciativas Invest Piauí",
-      local: "Auditório Maestrina Clóris de Oliveira",
-    },
-    {
-      categoria: "Palestras",
-      dia: "2026-10-07",
-      horario: "15:00 às 16:00",
-      titulo: "Apresentação sobre UX/UI",
+      titulo: "Startup Piaui + PIT",
+      palestrantes: [
+      "lucianaTsukada",
+      "gregMaranhao",
+      "simaoOliveira"
+    ],
       local: "Auditório Maestrina Clóris de Oliveira",
     },
     {
@@ -317,7 +445,7 @@ const SITE_CONFIG = {
       dia: "2026-10-07",
       horario: "16:00 às 17:00",
       titulo: "Estratégias de especialização de domínio em LLMs",
-      palestrante: "bianca",
+      palestrantes: ["bianca"],
       local: "Auditório Maestrina Clóris de Oliveira",
     },
     {
@@ -325,7 +453,7 @@ const SITE_CONFIG = {
       dia: "2026-10-07",
       horario: "17:00 às 18:00",
       titulo: "GraphRAG: Grafos, Ontologias e Agentes de IA",
-      palestrante: "charlenoPires",
+      palestrantes: ["charlenoPires"],
       local: "Auditório Maestrina Clóris de Oliveira",
     },
     {
@@ -333,7 +461,7 @@ const SITE_CONFIG = {
       dia: "2026-10-07",
       horario: "17:00 às 18:00",
       titulo: "Proteja Seus Dados: Guia Completo de Segurança Digital",
-      palestrante: "joaoPedro",
+      palestrantes: ["joaoPedro"],
       local: "Laboratório B3-10",
     },
     {
@@ -341,6 +469,10 @@ const SITE_CONFIG = {
       dia: "2026-10-07",
       horario: "16:00 às 18:00",
       titulo: "Refinar proposta Invest Piauí IdeiaLab",
+      palestrantes: [
+        "simaoOliveira",
+        "lucianaTsukada"
+      ],
       local: "Laboratório EmbarcaTech (Sala A1-07)",
     },
     {
@@ -348,7 +480,7 @@ const SITE_CONFIG = {
       dia: "2026-10-07",
       horario: "18:00 às 19:00",
       titulo: "Como se destacar no Mercado de Tecnologia em 2026",
-      palestrante: "guilhermeSimeao",
+      palestrantes: ["guilhermeSimeao"],
       local: "Auditório Maestrina Clóris de Oliveira",
     },
 
@@ -358,6 +490,10 @@ const SITE_CONFIG = {
       dia: "2026-10-08",
       horario: "08:30 às 10:30",
       titulo: "Refinar proposta Invest Piauí Idealab",
+      palestrantes: [
+        "simaoOliveira",
+        "lucianaTsukada"
+      ],
       local: "Laboratório EmbarcaTech (Sala A1-07)",
     },
     {
@@ -368,17 +504,32 @@ const SITE_CONFIG = {
       local: "Térreo Prédio B",
     },
     {
+      categoria: "Palestras",
+      dia: "2026-10-08",
+      horario: "10:00 às 11:00",
+      titulo: "Considerações sobre Ética no uso de IA",
+      palestrantes: ["nazarenoCesar"],
+      local: "Auditório Maestrina Clóris de Oliveira",
+    },
+    {
       categoria: "Minicursos",
       dia: "2026-10-08",
       horario: "14:00 às 18:00",
       titulo: "Minicurso de Bioinformática",
+       palestrantes: [
+        "gusthavoEduardo",
+        "marcus"
+      ],
+      resumo:
+        "Alinhamento de sequências e algoritmos de Smith-Waterman.",
       local: "Laboratório B3-10",
     },
     {
       categoria: "Palestras",
       dia: "2026-10-08",
       horario: "14:00 às 15:00",
-      titulo: "Palestra Patrocínio",
+      titulo: "Por que a IA não vai fazer seu jogo sozinha", // trocar pelo título real
+      palestrantes: ["luisFelipePatrocinio"],
       local: "Auditório Maestrina Clóris de Oliveira",
     },
     {
@@ -386,7 +537,7 @@ const SITE_CONFIG = {
       dia: "2026-10-08",
       horario: "14:00 às 16:00",
       titulo: "Pitch! Agora é com você — Roteirização do Pitch IdeiaLab",
-      palestrante: "vicenteOliveira",
+      palestrantes: ["vicenteOliveira"],
       local: "Laboratório EmbarcaTech (Sala A1-07)",
     },
     {
@@ -401,35 +552,35 @@ const SITE_CONFIG = {
       dia: "2026-10-08",
       horario: "15:00 às 16:00",
       titulo: "A Nova Formação do Profissional de Computação",
-      palestrante: "neyParanagua",
+      palestrantes: ["neyParanagua"],
       local: "Auditório Maestrina Clóris de Oliveira",
     },
     {
       categoria: "Palestras",
       dia: "2026-10-08",
       horario: "16:00 às 16:30",
-      titulo: "Palestra LIMS",
+      titulo: "Apresentação do LIMS: fomentando a busca por conhecimento",
       local: "Auditório Maestrina Clóris de Oliveira",
     },
     {
       categoria: "Palestras",
       dia: "2026-10-08",
       horario: "16:30 às 17:00",
-      titulo: "Palestra Labiras",
+      titulo: "Apresentação do Labiras",
       local: "Auditório Maestrina Clóris de Oliveira",
     },
     {
       categoria: "Palestras",
       dia: "2026-10-08",
       horario: "17:00 às 17:30",
-      titulo: "Palestra GRUNA",
+      titulo: "Apresentação do GrunaLabs: transformando sua pesquisa em uma startup",
       local: "Auditório Maestrina Clóris de Oliveira",
     },
     {
       categoria: "Palestras",
       dia: "2026-10-08",
-      horario: "17:30 às 18:30",
-      titulo: "Palestra Inovatech",
+      horario: "17:30 às 18:00",
+      titulo: "Apresentação do Inovatech",
       local: "Auditório Maestrina Clóris de Oliveira",
     },
 
@@ -446,16 +597,8 @@ const SITE_CONFIG = {
       dia: "2026-10-09",        // preencher
       horario: "14:00 às 16:00", // preencher
       titulo: "Criação de Painéis no Power BI: da Análise à Visualização",
-      palestrante: "laysEmanuelly",
+      palestrantes: ["laysEmanuelly"],
       local: "Auditório Carmen Sinott",        // preencher
-    },
-    {
-      categoria: "Palestras",
-      dia: "2026-10-09",
-      horario: "15:00 às 16:00",
-      titulo: "Considerações sobre Ética no uso de IA",
-      palestrante: "nazarenoCesar",
-      local: "Auditório Maestrina Clóris de Oliveira",
     },
     {
       categoria: "",

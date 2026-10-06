@@ -960,15 +960,27 @@ button:focus-visible {
   color: var(--cor-texto-suave);
 }
 
+.cronograma__palestrantes {
+  display: flex;
+  flex-direction: column;   /* um embaixo do outro */
+  align-items: flex-start;
+  gap: 4px;
+  margin-top: 8px;
+}
+
 .cronograma__palestrante {
-  display: inline-block;
-  margin: 8px 0 0;
+  display: block;
+  width: fit-content;       /* o clique fica só no texto */
+  max-width: 100%;
+  margin: 0;
   padding: 0;
   border: none;
   background: none;
   font: inherit;
   color: var(--cor-azul);
   text-align: left;
+  white-space: normal;      /* nomes longos quebram em vez de vazar */
+  overflow-wrap: anywhere;
   cursor: pointer;
 }
 
@@ -2090,6 +2102,14 @@ button:focus-visible {
 
     font-size: 0.82rem;
   }
+
+.cronograma__palestrantes {
+  gap: 6px;               /* mais espaço entre os nomes para facilitar o toque */
+}
+
+.cronograma__palestrante {
+  font-size: 0.85rem;     /* acompanha o título nessa largura */
+}
 
   .cronograma__categorias {
     display: grid;

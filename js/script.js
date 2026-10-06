@@ -340,12 +340,12 @@ function renderCronograma() {
     <div class="cronograma__lista">
 
       ${atividades.map((item) => {
+        
+        const chavePessoa = item.palestrante || item.musico;
 
-        const palestrante =
-          item.palestrante &&
-          SITE_CONFIG.palestrantes[item.palestrante]
-            ? SITE_CONFIG.palestrantes[item.palestrante]
-            : null;
+        const palestrantes = (item.palestrantes || [])
+          .map((chave) => ({ chave, dados: SITE_CONFIG.palestrantes[chave] }))
+          .filter((p) => p.dados);
 
         return `
           <article class="cronograma__item">
@@ -360,21 +360,26 @@ function renderCronograma() {
                 ${item.titulo || ""}
               </h3>
 
-              ${
-                palestrante
-                  ? `
-                    <button
-                      type="button"
-                      class="cronograma__palestrante"
-                      data-palestrante="${item.palestrante}"
-                    >
-                      ${palestrante.papel || "Palestrante"}:
-                      <strong>${palestrante.nome}</strong>
-                    </button>
-                  `
-                  : ""
-              }
-
+${
+  palestrantes.length > 0
+    ? `
+      <div class="cronograma__palestrantes">
+        ${palestrantes
+          .map((p) => `
+  <button
+    type="button"
+    class="cronograma__palestrante"
+    data-palestrante="${p.chave}"
+  >
+    ${p.dados.papel || "Palestrante"}:
+    <strong>${p.dados.nome}</strong>
+  </button>
+`)
+          .join("")}
+      </div>
+    `
+    : ""
+}
               <p class="cronograma__local">
                 Local:
                 ${item.local || "A definir"}
