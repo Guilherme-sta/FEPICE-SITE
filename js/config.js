@@ -190,6 +190,44 @@ const SITE_CONFIG = {
         "Ética e Inteligência Artificial"
       ]
     },
+
+    charlenoPires: {
+      papel: "Palestrante",
+      nome: "Charleno Pires",
+      cargo: "Professor Mestre",
+      instituicao: "Instituto Federal do Piauí (IFPI) · Campus Altos",
+      foto: "assets/img/charleno-perfil.jpeg", // ex: "assets/img/charleno-pires-perfil.jpg"
+      resumoPalestra:
+        "Modelos de linguagem respondem de memória. Por isso desconhecem dados privados, ficam desatualizados e inventam fatos com confiança. O RAG vetorial resolve parte disso, mas falha em três tipos de pergunta: cadeias de fatos (\"o que cursar antes de Aprendizado de Máquina?\"), junções (\"quais professores ensinam conteúdos de grafos?\") e visão do todo (\"quais os grandes temas do curso?\"). A palestra mostra como grafos de conhecimento e ontologias preenchem essa lacuna, percorrendo a escada semântica até o grafo de conhecimento e abrindo o funcionamento do GraphRAG: extração de entidades, comunidades de Leiden e busca local e global. Com dados de benchmarks recentes, compara RAG, GraphRAG e fine-tuning em qualidade, custo e manutenção, e conclui que nenhum vence sempre e que o tipo de pergunta define a arquitetura. Por fim, apresenta o grafo como ferramenta, memória temporal e camada de regras para agentes de IA, incluindo integração via MCP. Simuladores interativos e código Python acompanham um caso do mundo acadêmico do IFPI.",
+      resumo:
+        "Mestre em Tecnologias Emergentes para a Educação. Professor do Instituto Federal do Piauí (IFPI), Campus Altos.",
+      areas: ["GraphRAG", "Grafos de Conhecimento", "Ontologias", "Agentes de IA", "RAG"]
+    },
+
+    guilhermeSimeao: {
+      papel: "Palestrante",
+      nome: "Guilherme Rodrigues Simeão",
+      cargo: "Engenheiro de Software",
+      instituicao: "Instituto Federal do Piauí (IFPI) · Egresso de ADS",
+      foto: "assets/img/guilherme-perfil.jpeg", // ex: "assets/img/guilherme-simeao-perfil.jpg"
+      resumoPalestra: "", // o bloco de notas não traz resumo da palestra
+      resumo:
+        "Engenheiro de software formado em Análise e Desenvolvimento de Sistemas pelo IFPI, com mais de oito anos de experiência em produtos digitais. Especialista em desenvolvimento mobile, passou por empresas como Riachuelo, Grupo Boticário e Banco ABC Brasil, contribuindo para aplicativos utilizados por mais de 10 milhões de usuários nos setores de comércio eletrônico, serviços financeiros, saúde e educação. Sua trajetória inclui liderança técnica, mentoria de desenvolvedores e entregas voltadas à qualidade, segurança e desempenho de software. Atualmente cursa pós-graduação em Engenharia de IA e aprofunda sua formação em agentes inteligentes, automação e desenvolvimento de software com inteligência artificial.",
+      areas: ["Desenvolvimento Mobile", "Agentes Inteligentes", "Automação", "Engenharia de IA", "Mentoria"]
+    },
+
+    laysEmanuelly: {
+      papel: "Ministrante",
+      nome: "Lays Emanuelly",
+      cargo: "Estudante de ADS e analista de dados no Observatório da Mulher Piauiense",
+      instituicao: "Instituto Federal do Piauí (IFPI) · Campus Teresina Central",
+      foto: "assets/img/lays-emanuelly-perfil.jpeg", // ex: "assets/img/lays-emanuelly-perfil.jpg"
+      resumoPalestra:
+        "A partir da experiência no Observatório da Mulher Piauiense, o minicurso apresenta o processo de construção de um painel de dados, mostrando que um bom mapeamento de dados começa antes do Power BI. O percurso parte da identificação de um problema, passa pelo planejamento do objetivo por trás dele e pelo processamento e análise dos dados, até chegar à construção do painel. Ao longo do processo, os participantes veem como transformar dados em informações que permitam identificar padrões, comparar cenários e responder às questões que deram origem à análise. A proposta é mostrar, de forma prática, o Power BI como uma ferramenta dentro de um processo maior de análise, no qual o planejamento, a qualidade dos dados e a interpretação dos resultados são fundamentais.",
+      resumo:
+        "Estudante do último período de Análise e Desenvolvimento de Sistemas (ADS) do IFPI – Campus Teresina Central. Atua no Observatório da Mulher Piauiense, da Secretaria das Mulheres de Estado, principalmente na área de análise de dados. Entre os painéis interativos em Power BI que desenvolveu estão a sistematização dos dados do Programa Nacional Pró-Equidade (edições 2024 e 2025), recortes demográficos do Piauí, os 10 anos da Lei do Feminicídio no estado e os organismos de políticas para as mulheres. Também desenvolveu o Mapa da Rede de Enfrentamento à Violência contra a Mulher, ferramenta web que reúne e localiza órgãos, instituições e serviços da rede de atendimento às mulheres em todo o Piauí.",
+      areas: ["Análise de Dados", "Power BI", "Visualização de Dados", "Painéis Interativos", "Políticas para Mulheres"]
+    }
   },
 
   cronograma: {
@@ -286,7 +324,8 @@ const SITE_CONFIG = {
       categoria: "Palestras",
       dia: "2026-10-07",
       horario: "17:00 às 18:00",
-      titulo: "Palestra Charleno Pires",
+      titulo: "GraphRAG: Grafos, Ontologias e Agentes de IA",
+      palestrante: "charlenoPires",
       local: "Auditório Maestrina Clóris de Oliveira",
     },
     {
@@ -304,11 +343,12 @@ const SITE_CONFIG = {
       titulo: "Refinar proposta Invest Piauí IdeiaLab",
       local: "Laboratório EmbarcaTech (Sala A1-07)",
     },
-     {
+    {
       categoria: "Palestras",
       dia: "2026-10-07",
       horario: "18:00 às 19:00",
-      titulo: "Palestra Guilherme",
+      titulo: "Como se destacar no Mercado de Tecnologia em 2026",
+      palestrante: "guilhermeSimeao",
       local: "Auditório Maestrina Clóris de Oliveira",
     },
 
@@ -395,18 +435,19 @@ const SITE_CONFIG = {
 
     // 09/10/2026
     {
-      categoria: "Palestras",
-      dia: "2026-10-09",
-      horario: "08:00 às 09:00",
-      titulo: "Palestra TI",
-      local: "a definir",
-    },
-    {
       categoria: "Apresentação de Trabalhos",
       dia: "2026-10-09",
       horario: "09:00 às 11:00",
-      titulo: "Apresentação dos PITs IdeaLab",
-      local: "DPI",
+      titulo: "Apresentação dos PITCHs IdeaLab",
+      local: "DPI - Diretoria de Pesquisa, Pós-graduação e Inovação",
+    },
+    {
+      categoria: "Minicursos",
+      dia: "2026-10-09",        // preencher
+      horario: "14:00 às 16:00", // preencher
+      titulo: "Criação de Painéis no Power BI: da Análise à Visualização",
+      palestrante: "laysEmanuelly",
+      local: "Auditório Carmen Sinott",        // preencher
     },
     {
       categoria: "Palestras",
@@ -421,21 +462,21 @@ const SITE_CONFIG = {
       dia: "2026-10-09",
       horario: "16:00 às 17:00",
       titulo: "Premiação FEPICE",
-      local: "a definir",
+      local: "Térreo Prédio B",
     },
     {
       categoria: "",
       dia: "2026-10-09",
       horario: "17:00 às 18:00",
       titulo: "Resultado Fase 2 e premiação Idealab",
-      local: "a definir",
+      local: "Auditório Maestrina Clóris de Oliveira",
     },
     {
       categoria: "",
       dia: "2026-10-09",
       horario: "18:00 às 18:30",
       titulo: "Encerramento",
-      local: "a definir",
+      local: "Auditório Maestrina Clóris de Oliveira",
     }
       // { categoria: "Palestras", dia: "2026-10-06", horario: "14:00",
       //   titulo: "", responsavel: "", local: "" }
