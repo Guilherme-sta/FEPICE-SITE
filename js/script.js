@@ -125,6 +125,13 @@ document.addEventListener("DOMContentLoaded", () => {
               : ""
           }
 
+           ${
+            chave === "ideiaLab" &&
+            ev.equipesSelecionadas && ev.equipesSelecionadas.disponivel && ev.equipesSelecionadas.url
+              ? `<a class="btn btn--primary" href="${ev.equipesSelecionadas.url}" target="_blank" rel="noopener noreferrer" aria-label="Consultar equipes selecionadas">Equipes selecionadas - 1ª etapa</a>`
+              : ""
+          }
+
           ${
             chave === "fepice" &&
             ev.projetosSelecionados && ev.projetosSelecionados.disponivel && ev.projetosSelecionados.url

@@ -77,6 +77,10 @@ const SITE_CONFIG = {
       equipesHomologadas: {
         disponivel: true,
         url: "https://drive.google.com/file/d/14iBUWcVhZ4e6W2lXIY8o2U8OMKrHtccL/view?usp=sharing"
+      },
+      equipesSelecionadas: {
+        disponivel: true,
+        url: "https://drive.google.com/file/d/1mR62uvk-aG8qQL9EvmNgWsrKrHjDbE1U/view?usp=sharing"
       }
     }
   },
