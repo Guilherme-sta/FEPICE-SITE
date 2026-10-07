@@ -289,16 +289,6 @@ const SITE_CONFIG = {
       areas: ["Empreendedorismo", "Startups", "Inovação"]
     },
 
-    gregMaranhao: {
-      papel: "Palestrante",
-      nome: "Greg Maranhão",
-      cargo: "Chefe de Gabinete representando o Diretor Presidente do PIT - Rafael Jales",
-      instituicao: "PIT",
-      foto: "",
-      resumo: "",
-      areas: ["Inovação", "Empreendedorismo"]
-    },
-
     simaoOliveira: {
       papel: "Palestrante",
       nome: "Simão Oliveira",
@@ -439,7 +429,6 @@ const SITE_CONFIG = {
       titulo: "Startup Piaui + PIT",
       palestrantes: [
       "lucianaTsukada",
-      "gregMaranhao",
       "simaoOliveira"
     ],
       local: "Auditório Maestrina Clóris de Oliveira",
