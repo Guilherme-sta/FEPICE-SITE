@@ -254,7 +254,7 @@ const SITE_CONFIG = {
       nome: "Silvio Pereira Silva Neto",
       cargo: "Aluno do curso de Informática",
       instituicao: "Instituto Federal do Piauí (IFPI)",
-      foto: "assets/img/isaac-perfil.jpeg",
+      foto: "assets/img/silvio-perfil.jpeg",
       resumo: "Aluno do curso de Informática do Instituto Federal do Piauí (IFPI).",
       areas: ["Informática", "Robótica", "Arduino"]
     },
@@ -436,14 +436,6 @@ const SITE_CONFIG = {
     {
       categoria: "Palestras",
       dia: "2026-10-07",
-      horario: "16:00 às 17:00",
-      titulo: "Estratégias de especialização de domínio em LLMs",
-      palestrantes: ["bianca"],
-      local: "Auditório Maestrina Clóris de Oliveira",
-    },
-    {
-      categoria: "Palestras",
-      dia: "2026-10-07",
       horario: "17:00 às 18:00",
       titulo: "GraphRAG: Grafos, Ontologias e Agentes de IA",
       palestrantes: ["charlenoPires"],
@@ -574,6 +566,14 @@ const SITE_CONFIG = {
       dia: "2026-10-08",
       horario: "17:30 às 18:00",
       titulo: "Apresentação do Inovatech",
+      local: "Auditório Maestrina Clóris de Oliveira",
+    },
+    {
+      categoria: "Palestras",
+      dia: "2026-10-08",
+      horario: "18:00 às 19:00",
+      titulo: "Estratégias de especialização de domínio em LLMs",
+      palestrantes: ["bianca"],
       local: "Auditório Maestrina Clóris de Oliveira",
     },
 
