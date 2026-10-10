@@ -125,10 +125,17 @@ document.addEventListener("DOMContentLoaded", () => {
               : ""
           }
 
-           ${
+          ${
             chave === "ideiaLab" &&
             ev.equipesSelecionadas && ev.equipesSelecionadas.disponivel && ev.equipesSelecionadas.url
               ? `<a class="btn btn--primary" href="${ev.equipesSelecionadas.url}" target="_blank" rel="noopener noreferrer" aria-label="Consultar equipes selecionadas">Equipes selecionadas - 1ª etapa</a>`
+              : ""
+          }
+
+          ${
+            chave === "ideiaLab" &&
+            ev.equipesSelecionadas2 && ev.equipesSelecionadas2.disponivel && ev.equipesSelecionadas2.url
+              ? `<a class="btn btn--secondary" href="${ev.equipesSelecionadas2.url}" target="_blank" rel="noopener noreferrer" aria-label="Consultar equipes selecionadas">Resultado - 2ª fase</a>`
               : ""
           }
 

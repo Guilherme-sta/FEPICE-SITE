@@ -81,6 +81,10 @@ const SITE_CONFIG = {
       equipesSelecionadas: {
         disponivel: true,
         url: "https://drive.google.com/file/d/1mR62uvk-aG8qQL9EvmNgWsrKrHjDbE1U/view?usp=sharing"
+      },
+      equipesSelecionadas2: {
+        disponivel: true,
+        url: "https://drive.google.com/file/d/1lYfK8ovY8t72QX0yhjM0s9AySpYWSVXn/view?usp=sharing"
       }
     }
   },
