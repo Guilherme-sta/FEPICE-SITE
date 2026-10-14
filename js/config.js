@@ -86,9 +86,9 @@ const SITE_CONFIG = {
         disponivel: true,
         url: "https://drive.google.com/file/d/1mR62uvk-aG8qQL9EvmNgWsrKrHjDbE1U/view?usp=sharing"
       },
-      equipesSelecionadas2: {
+      resultadoFinal: {
         disponivel: true,
-        url: "https://drive.google.com/file/d/1lYfK8ovY8t72QX0yhjM0s9AySpYWSVXn/view?usp=sharing"
+        url: "https://drive.google.com/file/d/1nQvk7RofGu-glFH8P6ULjzXWv4YBq8Nh/view?usp=sharing"
       }
     }
   },
@@ -624,13 +624,6 @@ const SITE_CONFIG = {
     }
       // { categoria: "Palestras", dia: "2026-10-06", horario: "14:00",
       //   titulo: "", responsavel: "", local: "" }
-    ]
-  },
-
-  projetosAprovados: {
-    disponivel: false,
-    lista: [
-      // { projeto: "", area: "", autores: "", instituicao: "" }
     ]
   },
 
