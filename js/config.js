@@ -43,7 +43,11 @@ const SITE_CONFIG = {
       projetosSelecionados: {
         disponivel: true,
         url: "https://drive.google.com/file/d/1UyY9V9x3ifnLm9BC-AkuhKT09xiViOvm/view?usp=sharing"
-      }
+      },
+      premiacao: {
+        disponivel: true,
+        url: "https://drive.google.com/file/d/1LzAmuyUPkrjQW0Utwwe3ZpVPahc3q-kJ/view?usp=sharing"
+      },
     },
     teresinaInfo: {
       nome: "Teresina Info 2026",
@@ -52,7 +56,7 @@ const SITE_CONFIG = {
       sobreDisponivel: true,
       sobreTexto: "O Campus Teresina Central do Instituto Federal do Piauí (IFPI) promove o Encontro de Informática de Teresina, organizado pelo <b>Laboratory of Innovation on Multimedia Systems (LIMS)</b>, com o tema <b>Tecnologia e Inteligência Artificial: Transformando o Futuro.</b> O evento tem como objetivo promover conhecimento através de palestras e minicursos sobre temas como inteligência artificial, programação, empreendedorismo, entre outros. As inscrições, gratuitas, ocorrem de 16 de setembro a 08 de outubro de 2026, sendo destinadas ao público geral.",
       inscricao: {
-        disponivel: true,
+        disponivel: false,
         url: "https://suap.ifpi.edu.br/eventos/inscricao/1/4052/"
       }
     },

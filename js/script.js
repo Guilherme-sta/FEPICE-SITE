@@ -145,6 +145,13 @@ document.addEventListener("DOMContentLoaded", () => {
               ? `<a class="btn btn--primary" href="${ev.projetosSelecionados.url}" target="_blank" rel="noopener noreferrer" aria-label="Consultar projetos selecionados">Projetos Selecionados</a>`
               : ""
           }
+
+          ${
+            chave === "fepice" &&
+            ev.premiacao && ev.premiacao.disponivel && ev.premiacao.url
+              ? `<a class="btn btn--secondary" href="${ev.premiacao.url}" target="_blank" rel="noopener noreferrer" aria-label="Consultar premiação">Premiação</a>`
+              : ""
+          }
       </div>
     `;
 
